@@ -6,5 +6,5 @@ IXD 617 Advanced Tech: Mobile Web
 <h4>Important Links</h4>
 <ul>
   <li>https://www.evakimdesigns.com/ </li>
-  <li>https://github.com/kiimeh/</li>
+  <li>https://github.com/kiimeh/IXD617_202290_01</li>
  </ul>
