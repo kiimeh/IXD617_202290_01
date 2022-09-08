@@ -2,9 +2,8 @@
 IXD 617 Advanced Tech: Mobile Web
 
 
-<h2>Eunhye Kim</h2>
-<h4>Important Links</h4>
-<ul>
-  <li>https://www.evakimdesigns.com/ </li>
-  <li>https://github.com/kiimeh/IXD617_202290_01</li>
- </ul>
+## Eunhye Kim
+
+### Important Links
+- http://ekimdesigns.com/
+- https://github.com/kiimeh/IXD617_202290_01/
