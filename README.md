@@ -8,3 +8,8 @@ IXD 617 Advanced Tech: Mobile Web
 
 - http://ekimdesigns.com/
 - https://github.com/kiimeh/IXD617_202290_01/
+
+
+### Assignment Links
+
+- https://ekimdesigns.com/ekim/aau/IXD617/profile/
