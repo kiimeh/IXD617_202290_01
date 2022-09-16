@@ -1,0 +1,8 @@
+.explanation h3 {
+  color: blue;
+}
+
+.intro {
+  display: grid;
+  gap: 20px;
+}
