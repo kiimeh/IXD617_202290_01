@@ -6,3 +6,11 @@
   display: grid;
   gap: 20px;
 }
+
+.main {
+  display: flex;
+}
+
+.participation {
+  flex-grow: 2;
+}
