@@ -5,6 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CLEAN IT!</title>
+
+    <!-- <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css"/> -->
+    <link rel="stylesheet" href="src/css/app.css"/>
+
+    <script src="lib/js/jquery-2.2.4.min.js"></script>
+    <script src="src/js/app.js"></script>
+    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
   </head>
-  <body></body>
+
+  <body>
+    <section data-role="page" id="signin-page">
+      <div data-role="main">
+        <form>
+          <input type="text">
+          <input type="password">
+          <button class="form-button">Sign In</button>
+        </form>
+        <div>
+          <a href="#recent-page" class="form-button">Sign In</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- RECENT PAGE -->
+    <section data-role="page" id="recent-page">
+      <div data-role="main">
+        Map!
+      </div>
+      <footer data-role="footer">
+        <ul>
+          <li><a href="#recent-page">Recent</a></li>
+          <li><a href="#list-page">List</a></li>
+          <li><a href="#user-profile-page">Profile</a></li>
+        </ul>
+      </footer>
+    </section>
+
+
+    <!-- LIST PAGE -->
+    <section data-role="page" id="list-page">
+      <header data-role="header">
+        Trash List
+      </header>
+      <div data-role="main">
+        <!-- div.trashlist-item*10>a[href="#trash-profile"]>{Trash $} -->
+        <div class="trashlist-item"><a href="#trash-profile">Trash 1</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 2</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 3</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 4</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 5</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 6</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 7</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 8</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 9</a></div>
+        <div class="trashlist-item"><a href="#trash-profile">Trash 10</a></div>
+      </div>
+      <footer data-role="footer">
+        <ul>
+          <li><a href="#recent-page">Recent</a></li>
+          <li><a href="#list-page">List</a></li>
+          <li><a href="#user-profile-page">Profile</a></li>
+        </ul>
+      </footer>
+    </section>
+
+    <!-- USER PROFILE PAGE -->
+    <section data-role="page" id="user-profile-page">
+      <div data-role="main">
+        User Profile
+      </div>
+
+
+      <footer data-role="footer">
+        <ul>
+          <li><a href="#recent-page">Recent</a></li>
+          <li><a href="#list-page">List</a></li>
+          <li><a href="#user-profile-page">Profile</a></li>
+        </ul>
+      </footer>
+    </section>
+  </body>
 </html>
