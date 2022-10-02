@@ -75,6 +75,8 @@ a{
     margin:0;
     padding:0;
     display: flex;
+    width: 100%;
+    position: relative;
 }
 
 [data-role="footer"] li{
@@ -82,8 +84,25 @@ a{
     text-align: center;
 }
 
-[data-role="header"] li{
-    flex: none;
+[data-role="header"] h1{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    text-align:center;
+    font-size: 1em;
+    margin: 0;
+}
+
+[data-role="header"] a{
+    padding: 0 1em;
+}
+
+[data-role="header"] a,
+[data-role="footer"] a{
+    display: block;
 }
 
 
