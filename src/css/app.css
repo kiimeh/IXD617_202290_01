@@ -10,9 +10,9 @@
 
     --color-main-rgb: 9, 34, 57;
     --color-main-hue: 178;
-    --color-main-light: hsl(var(--color-main-hue), 52%, 77%);
-    --color-main-medium: hsl(var(--color-main-hue), 38%, 56%);
-    --color-main-dark: hsl(var(--color-main-hue), 57%, 27%);
+    --color-main-light: hsl(var(--color-main-rgb), 52%, 77%);
+    --color-main-medium: hsl(var(--color-main-rgb), 38%, 56%);
+    --color-main-dark: hsl(var(--color-main-rgb), 57%, 27%);
 }
 
 body {
