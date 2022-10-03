@@ -119,3 +119,7 @@ a{
 
 .flex-column{flex-direction: column;}
 
+
+button.onboarding-button.ui-btn.ui-shadow.ui-corner-all {
+    display: block;
+}
