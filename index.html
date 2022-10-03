@@ -20,7 +20,7 @@
     <section data-role="page" id="onboarding-page">
       <div data-role="main">
         Onboarding introduction to app.
-        <button class="onboarding-button">Next</button>
+        <button class="onboarding-button"><a href="#signin-page">Next</a></button>
       </div>
 
 
@@ -29,14 +29,24 @@
     <!-- LOGIN Page -->
     <section data-role="page" id="signin-page">
       <div data-role="main">
-        <form>
-          <input type="text">
-          <input type="password">
+        <form class="form" id="signin-form" data-ajax="false">
+          <div class="form-control">
+            <label for=""></label>
+            <input class="form-input" type="text" id="signin-username">
+            <input class="form-input" type="password" id="signin-password">
+          </div>
+
           <button class="form-button">Sign In</button>
         </form>
         <div>
           <a href="#recent-page" class="form-button">Sign In</a>
         </div>
+      </div>
+    </section>
+
+    <!-- SIGNUP Page -->
+    <section data-role="page" id="signup-page">
+      <div data-role="main">
       </div>
     </section>
 
