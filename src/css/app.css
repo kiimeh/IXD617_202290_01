@@ -28,6 +28,8 @@ a{
 
 }
 
+
+
 /* App structure */
 .ui-loader{
     display: none;
@@ -116,3 +118,15 @@ a{
 .flex-stretch{flex:1 1 auto;}
 
 .flex-column{flex-direction: column;}
+
+button{
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
