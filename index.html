@@ -31,12 +31,16 @@
       <div data-role="main">
         <form class="form" id="signin-form" data-ajax="false">
           <div class="form-control">
-            <label for=""></label>
-            <input class="form-input" type="text" id="signin-username">
-            <input class="form-input" type="password" id="signin-password">
+            <label class="form-label" for="signin-username">Username</label>
+            <input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Type your Username">
           </div>
-
-          <button class="form-button">Sign In</button>
+          <div class="form-control">
+            <label class="form-label" for="signin-username">Username</label>
+            <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Type your Password">
+          </div>
+          <div class="form-control">
+            <button class="form-button">Sign In</button>
+          </div>
         </form>
         <div>
           <a href="#recent-page" class="form-button">Sign In</a>
