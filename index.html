@@ -14,17 +14,7 @@
     <script src="src/js/signin.js"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
   </head>
-
   <body>
-    <!-- Onboarding Page -->
-    <!-- <section data-role="page" id="onboarding-page">
-      <div data-role="main">
-        Onboarding introduction to app.
-        <button class="onboarding-button"><a href="#signin-page">Next</a></button>
-      </div>
-
-
-    </section> -->
 
     <!-- LOGIN Page -->
     <section data-role="page" id="signin-page">
@@ -83,6 +73,19 @@
     <section data-role="page" id="recent-page">
       <div data-role="main">
         <div class="map"></div>
+
+        <div class="floater top right">
+          <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
+        </div>
+
+        <div id="recent-add-modal" class="modal">
+          <div class="modal-back" data-deactivate="#recent-add-modal"></div>
+          <div class="modal-drawer right">
+              <div class="modal-head">Head</div>
+              <div class="modal-body">Body</div>
+              <div class="modal-foot">Foot</div>
+          </div>
+        </div>
       </div>
       <footer data-role="footer">
         <ul>
@@ -91,6 +94,7 @@
           <li><a href="#user-profile-page">Profile</a></li>
         </ul>
       </footer>
+
     </section>
 
 
@@ -100,17 +104,23 @@
         <h1>Trash List</h1>
       </header>
       <div data-role="main">
-        <!-- div.trashlist-item*10>a[href="#trash-profile"]>{Trash $} -->
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 1</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 2</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 3</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 4</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 5</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 6</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 7</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 8</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 9</a></div>
-        <div class="trashlist-item"><a href="#trash-profile-page">Trash 10</a></div>
+        <div class="trashlist">
+          <!-- div.trashlist-item*10>a[href="#trash-profile"]>{Trash $} -->
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 1</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 2</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 3</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 4</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 5</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 6</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 7</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 8</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 9</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 10</a></div>
+            <div class="trashlist-item"><a href="#trash-profile-page">Trash 11</a></div>
+        </div>
+        <div class="floater bottom right">
+          <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+        </div>
       </div>
       <footer data-role="footer">
         <ul>
@@ -119,6 +129,15 @@
           <li><a href="#user-profile-page">Profile</a></li>
         </ul>
       </footer>
+
+      <div id="list-add-modal" class="modal">
+        <div class="modal-back" data-deactivate="#list-add-modal"></div>
+        <div class="modal-popup">
+            <div class="modal-head">Head</div>
+            <div class="modal-body">Body</div>
+            <div class="modal-foot">Foot</div>
+        </div>
+      </div>
     </section>
 
     <!-- USER PROFILE PAGE -->
@@ -147,12 +166,14 @@
         <ul>
           <li><a href="#" data-rel="back">Back</a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#animal-edit-page">Edit</a></li>
+          <li><a href="#trash-edit-page">Edit</a></li>
         </ul>
       </header>
       <div data-role="main">
         Trash Type
       </div>
     </section>
+
+
   </body>
 </html>
