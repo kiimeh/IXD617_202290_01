@@ -10,6 +10,8 @@ const checkSigninForm = () => {
         //Logged in 
         console.log("Success");
         sessionStorage.userId = 3;
+
+        $("#signin-form")[0].reset();
     }else {
         //Not Logged In
         console.log("Failure");

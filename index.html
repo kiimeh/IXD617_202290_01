@@ -17,14 +17,14 @@
 
   <body>
     <!-- Onboarding Page -->
-    <section data-role="page" id="onboarding-page">
+    <!-- <section data-role="page" id="onboarding-page">
       <div data-role="main">
         Onboarding introduction to app.
         <button class="onboarding-button"><a href="#signin-page">Next</a></button>
       </div>
 
 
-    </section>
+    </section> -->
 
     <!-- LOGIN Page -->
     <section data-role="page" id="signin-page">
@@ -40,7 +40,7 @@
           </div>
           <div class="form-control">
             <label class="form-label" for="signin-password">Password</label>
-            <input class="form-input" type="text" id="signin-password" data-role="none" placeholder="Type your Password">
+            <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Type your Password">
           </div>
           <div class="form-control">
             <input type="submit" class="form-button" value="Click me" data-role="none">
@@ -62,11 +62,11 @@
           </div>
           <div class="form-control">
             <label class="form-label" for="signup-password">Type a Password</label>
-            <input class="form-input" type="text" id="signup-password" data-role="none" placeholder="Type your Password">
+            <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Type your Password">
           </div>
           <div class="form-control">
             <label class="form-label" for="signup-confirm">Confirm Password</label>
-            <input class="form-input" type="text" id="signup-confirm" data-role="none" placeholder="Type your Password">
+            <input class="form-input" type="password" id="signup-confirm" data-role="none" placeholder="Type your Password">
           </div>
           <div class="form-control">
             <input type="submit" class="form-button" value="Click me" data-role="none">
@@ -82,7 +82,7 @@
     <!-- RECENT PAGE -->
     <section data-role="page" id="recent-page">
       <div data-role="main">
-        Map!
+        <div class="map"></div>
       </div>
       <footer data-role="footer">
         <ul>
@@ -97,7 +97,7 @@
     <!-- LIST PAGE -->
     <section data-role="page" id="list-page">
       <header data-role="header">
-        Trash List
+        <h1>Trash List</h1>
       </header>
       <div data-role="main">
         <!-- div.trashlist-item*10>a[href="#trash-profile"]>{Trash $} -->
@@ -124,7 +124,7 @@
     <!-- USER PROFILE PAGE -->
     <section data-role="page" id="user-profile-page">
       <div data-role="main">
-        User Profile
+        <h1>User Profile</h1>
         <div>
           <a href="#" class="js-logout">Log out</a>
         </div>
@@ -153,14 +153,6 @@
       <div data-role="main">
         Trash Type
       </div>
-
-      <footer data-role="footer">
-        <ul>
-          <li><a href="#recent-page">Recent</a></li>
-          <li><a href="#list-page">List</a></li>
-          <li><a href="#user-profile-page">Profile</a></li>
-        </ul>
-      </footer>
     </section>
   </body>
 </html>
