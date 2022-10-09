@@ -3,7 +3,7 @@
 }
 
 :root{
-    --font-header:sans-serif;
+    --font-header:filson-pro, sans-serif;
     --font-body:var(--font-header);
 
     --header-height: 3rem;
@@ -11,13 +11,15 @@
     --color-main-rgb: 101, 186, 183;
     --color-main-hue: 178;
     --color-main-light: hsl(var(--color-main-rgb), 52%, 77%);
-    --color-main-medium: hsl(var(--color-main-rgb), 38%, 56%);
+    /* --color-main-medium: hsl(var(--color-main-rgb), 38%, 56%); */
     --color-main-dark: hsl(var(--color-main-rgb), 57%, 27%);
 
     --color-neutral-lighter: rgb(234, 238, 236);
     --color-neutral-light: rgb(194, 202, 198);
     --color-neutral-medium: rgb(111, 121, 116);
     --color-neutral-dark: rgb(37, 44, 41);
+
+    --color-main-medium: #6AB879;
 }
 
 body {
@@ -155,7 +157,7 @@ a {
 }
 
 .form-button{
-    background-color: var(--color-neutral-lighter);
+    background-color: var(--color-main-medium);
     border-width: 0;
     border-radius: 0.2em;
     padding: 0.5em 1em;
