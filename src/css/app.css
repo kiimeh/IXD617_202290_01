@@ -346,5 +346,27 @@ a {
     position:relative;
     overflow:auto;
 
-    padding: 1em;
+    padding: 1.5em;
+}
+
+.glass-text{
+    display:block;
+    text-align:center;
+}
+
+/* .trashlist-item{
+    vertical-align: top;
+    display:inline-block;
+    text-align: center;
+    width: 120px;
+} */
+
+.my{
+    background-image: url('../../images/glass3.png');
+    background-size: cover;
+    background-position: center;
+    height:50vw;
+    width:50vw;
+    border-radius: 50%;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.2);
 }
