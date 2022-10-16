@@ -495,8 +495,54 @@ i.fas {
     border-radius: 50%;
     overflow: hidden;
     background-color:rgb(37, 44, 41);
+    background-position: center;
+    background-size: cover;
 }
 
 .circle-next{
     margin-top: 10%;
+}
+
+.circle.one{
+    background-image: url('../../images/grove.jpeg');
+
+}
+
+.circle.two{
+    background-image: url('../../images/lax.jpeg');
+
+}
+
+.circle.three{
+    background-image: url('../../images/venice.jpg');
+
+}
+
+.circle.four{
+    background-image: url('../../images/beverly.jpg');
+
+}
+
+.circle.five{
+    background-image: url('../../images/santamonica.jpg');
+
+}
+
+.circle.six{
+    background-image: url('../../images/hollywood.jpg');
+}
+
+.trash-history-text{
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    color:#fff;
+    font-size:1.5em;
+    font-weight:800;
+    font-style: normal;
+}
+
+.form-control-history{
+    margin-top: 50px;
+    padding: 15px;
 }
