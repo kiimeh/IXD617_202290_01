@@ -9,7 +9,7 @@
     --font-main: ratio, sans-serif;
     --font-main-usage: var(--font-main);
 
-    --header-height: 5rem;
+    --header-height: 4rem;
 
     --color-main-rgb: 101, 186, 183;
     --color-main-hue: 178;
@@ -181,6 +181,13 @@ a {
     text-decoration: none;
 }
 
+.form-profile{
+    padding:15px;
+}
+
+.form-control-profile{
+    margin-top:20px;
+}
 
 .back{
     /* position: absolute; */
@@ -247,7 +254,7 @@ h1 .head{
 .floater { position:absolute; }
 .floater.top { top: 1rem; }
 .floater.right { right: 1rem; }
-.floater.bottom { bottom: 4rem; position: fixed;}
+.floater.bottom { bottom: 5rem; position: fixed;}
 .floater.left { left: 1rem; }
 
 .btn-circle {
@@ -371,7 +378,7 @@ h1 .head{
   }
 
   .containerEdit {
-    margin-top: -1em; 
+    margin-top: -2.3em; 
   }
 
 
@@ -389,23 +396,12 @@ h1 .head{
   }
 
 
-/* Trash profile page */
-  /* .trashtype {
-    background-size: cover;
-    background-position: center;
-    background-image: url('../../images/plasticTrash.jpg');
-    height:50vw;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.2);
-    background-color: #fff;
-  } */
-
   .container2 img{
     width: 100%;
     height: 110vw;
-    border-radius: 10px;
-    filter: brightness(75%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    filter: brightness(60%);
     box-shadow: 0.1em 0.1em 0.8em rgba(0,0,0,0.2);
   }
 
@@ -417,6 +413,7 @@ h1 .head{
     font-weight: 700;
     font-style: normal;
     font-size: 2em;
+    letter-spacing: 2px;
     color: #fff;
   }
 
@@ -428,11 +425,55 @@ h1 .head{
     margin-top: 10px;
   }
 
+  .center-profile{
+    position: absolute;
+    top: 3em;
+    text-align: center;
+    font-size: 1.4em;
+    color: #fff;
+    width: 100%;
+  }
+
   .section-header h3{
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
     text-align: center;
   }
 
-  i{
+/* icon */
+i.fas {
     position: absolute;
-  }
+    left: 7.5rem;
+}
+
+::placeholder, textarea{
+    color: #EBEBEB;
+    border-color: var(--color-neutral-light);
+    border-radius: 0.2em;
+    width: 100%;
+}
+
+.btn-detail{
+    display: inline-block;
+    margin: 10px auto;
+    background-color: #4A83ED;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 30px;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    top:5em;
+    border-radius: 70%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-detail:active{
+    background-color: #3474eb;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}

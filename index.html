@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="src/css/app.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/qmk4zjg.css">
 
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="lib/js/jquery-2.2.4.min.js"></script>
     <script src="src/js/app.js"></script>
     <script src="src/js/signin.js"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://kit.fontawesome.com/855a6c101f.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -87,16 +87,16 @@
       <div data-role="main">
         <div class="map"></div>
 
-        <div class="floater top right">
+        <!-- <div class="floater top right">
           <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
-        </div>
+        </div> -->
 
         <div id="recent-add-modal" class="modal">
           <div class="modal-back" data-deactivate="#recent-add-modal"></div>
           <div class="modal-drawer right">
-              <div class="modal-head">Head</div>
-              <div class="modal-body">Body</div>
-              <div class="modal-foot">Foot</div>
+              <div class="modal-head">Add New Location</div>
+              <div class="modal-body">Cancel</div>
+              <div class="modal-foot">Cancel</div>
           </div>
         </div>
       </div>
@@ -114,13 +114,13 @@
     <!-- Trash LIST PAGE -->
     <section data-role="page" id="list-page">
       <header data-role="header">
-        <h1 class="head">Recently Founded Trash List</h1>
+        <h1 class="head">Recently Found Trash List</h1>
       </header>
       <div data-role="main" class="overscroll">
-        <div class="section-header"><h3>Los Angeles</h3></div>
+        <div class="section-header"><h3><i style='font-size:18px' class='fas'>&#xf3c5;</i>Los Angeles</h3></div>
         <div class="container">
           <img src="images/plastic.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#trash-profile-page"><i class="fa-regular fa-location-dot"></i>Plastic</a></div>
+          <div class="centered-text"><a href="#trash-profile-page">Plastic</a></div>
         </div>
 
         <div class="container containerEdit">
@@ -153,38 +153,73 @@
       <div id="list-add-modal" class="modal">
         <div class="modal-back" data-deactivate="#list-add-modal"></div>
         <div class="modal-popup">
-            <div class="modal-head">Head</div>
-            <div class="modal-body">Body</div>
-            <div class="modal-foot">Foot</div>
+            <div class="modal-head">Add New Location</div>
+            <div class="modal-body">Cancel</div>
+            <!-- <div class="modal-foot">Foot</div> -->
         </div>
       </div>
     </section>
 
 
-    <!-- Trash (plastic) PROFILE PAGE -->
+    <!-- Trash (plastic) Detail PAGE -->
     <section data-role="page" id="trash-profile-page">
       <header data-role="header">
-        <h1>Trash Profile</h1>
+        <h1>Trash Detail</h1>
         <ul>
           <li><a href="#" data-rel="back">Back</a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#trash-edit-page">Edit</a></li>
+          <li><a href="#trash-history-page">History</a></li>
         </ul>
       </header>
 
       <div data-role="main">
         <div class="container2">
           <img src="images/plasticTrash.jpg" alt="">
-          <div class="bottom-left">Plastic waste<p class="bottom-paragraph">Los Angeles, CA</p>
+          <div class="center-profile">Total plastics found <br> in this location:     <br><button class="btn-detail">3,627</button>
           </div>
+          <div class="bottom-left">Plastic waste<p class="bottom-paragraph"><i class="fa-sharp fa-solid fa-location-dot"></i>Los Angeles, CA</p>
+          </div>
+            <form class="form form-profile" data-ajax="false">
+              <div class="form-control">
+                <label class="form-label" for="signin-username">Date you found:</label>
+                <input class="form-input" type="date" id="signin-username" data-role="none">
+              </div>
+              <div class="form-control">
+                <label class="form-label" for="signin-password">Address where the plastic has found:</label>
+                <input class="form-input" type="text" id="signin-password" data-role="none" placeholder="Street address">
+              </div>
 
+              <div class="form-control">
+                <label class="form-label" for="signin-password">Any Comments?</label>
+                <textarea name="message" id="">Your Comment</textarea>
+              </div>
+
+              <div class="form-control form-control-profile">
+                <input type="submit" class="form-button" value="Save Location" data-role="none" style="color: white">
+              </div>
+            </form>
         </div>
-
-
-
-
-
       </div>
+    </section>
+
+
+
+    <!-- Trash History Page -->
+    <section data-role="page" id="trash-history-page">
+      <header data-role="header">
+        <h1>Trash History</h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+        </ul>
+      </header>
+
+
+
+
+
+
+      
     </section>
 
 
@@ -207,6 +242,6 @@
       </footer>
     </section>
 
-
+    <script src="https://kit.fontawesome.com/855a6c101f.js" crossorigin="anonymous"></script>
   </body>
 </html>
