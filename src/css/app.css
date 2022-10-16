@@ -533,6 +533,8 @@ i.fas {
 }
 
 .trash-history-text{
+    background-color: rgba(0,0,0,0.7);
+    padding: 3%;
     margin: auto;
     text-align: center;
     vertical-align: middle;
@@ -542,7 +544,77 @@ i.fas {
     font-style: normal;
 }
 
+a.alink.ui-link {
+    color: #fff;
+}
+
 .form-control-history{
     margin-top: 50px;
     padding: 15px;
+}
+
+/* Onboarding  */
+
+.background-onboarding{
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/background-onboarding.png');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+}
+
+h2.onboarding-text{
+    margin: 0;
+    position: absolute;
+    top: 3em;
+    font-size: 3rem;
+    padding: 4%;
+}
+
+p.onboarding-text-para{
+    margin:0;
+    position: absolute;
+    font-size: 2rem;
+    top: 7em;
+    padding: 4%;
+}
+
+.onboarding-button{
+    position: absolute;
+    top: 40em;
+    width: 100%;
+}
+
+.form-button2{
+    padding: 1.3em 0.6em;
+    background-color:rgb(255, 255, 255);
+    color: #3474eb;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.586);
+}
+
+/* Trash Total page */
+.textarea-container{
+    position: relative;
+
+}
+
+.containerimage{
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.textarea{
+    position: absolute;
+    top:15px;
+    right: 20px;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
 }

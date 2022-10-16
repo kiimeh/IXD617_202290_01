@@ -22,8 +22,14 @@
     <section data-role="page" id="onboarding-page">
       <div data-role="main" class="display-flex flex-column">
         <div class="flex-stretch">
-          <img src="images/background-onboarding.png" alt="">
-          <button>Clcik</button>
+          <div class="background-onboarding">
+            <h2 class="onboarding-text">Hello,</h2>
+            <p class="onboarding-text-para">Let's track trash to make our earth clean and healthy.</p>
+          </div>
+
+          <div class="form-control form-control-history onboarding-button">
+            <a href="#signin-page"><input type="submit" class="form-button form-button2" value="Next" data-role="none"></a>
+          </div>
         </div>
       </div>
     </section>
@@ -215,7 +221,7 @@
       </header>
 
       <div class="container-history">
-        <div class="circle one"><span class="trash-history-text">The Grove</span></div>
+        <div class="circle one"><span class="trash-history-text"><a href="#trash-total-location" class="alink">The Grove</a></span></div>
         <div class="circle two"><span class="trash-history-text">LAX</span></div>
       </div>
 
@@ -233,8 +239,28 @@
       <div class="form-control form-control-history">
         <input type="submit" class="form-button" value="Edit" data-role="none" style="color: white">
       </div>
+    </section>
 
 
+    <!-- Trash Total page-->
+    <section data-role="page" id="trash-total-location">
+      <header data-role="header">
+        <h1>Trash Detail</h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#trash-history-page">History</a></li>
+        </ul>
+      </header>
+
+      <div data-role="main">
+        <div class="textarea-container">
+          <img src="images/thegrovedetail.jpeg" alt="" class="containerimage">
+          <div class="textarea">
+            <h4>Nature</h4>
+          </div>
+        </div>
+      </div>
     </section>
 
 
