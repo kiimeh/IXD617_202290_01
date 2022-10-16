@@ -6,7 +6,10 @@
     --font-header:filson-pro, sans-serif;
     --font-body:var(--font-header);
 
-    --header-height: 3rem;
+    --font-main: ratio, sans-serif;
+    --font-main-usage: var(--font-main);
+
+    --header-height: 5rem;
 
     --color-main-rgb: 101, 186, 183;
     --color-main-hue: 178;
@@ -25,6 +28,12 @@
 body {
     margin: 0;
     font-family: var(--font-body);
+}
+
+h1{
+    font-family: var(--font-main-usage);
+    font-weight: 500;
+    font-style: normal;
 }
 
 
@@ -101,7 +110,7 @@ a {
     height: 100%;
 
     text-align:center;
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 0;
 }
 
@@ -229,12 +238,16 @@ a {
     background-size: cover;
 }
 
+h1 .head{
+    font-family: ligurino, sans-serif;
+}
+
 
 /* FLOATER */
 .floater { position:absolute; }
 .floater.top { top: 1rem; }
 .floater.right { right: 1rem; }
-.floater.bottom { bottom: 1rem; }
+.floater.bottom { bottom: 4rem; position: fixed;}
 .floater.left { left: 1rem; }
 
 .btn-circle {
@@ -413,4 +426,13 @@ a {
     font-style: normal;
     font-size: 0.5em;
     margin-top: 10px;
+  }
+
+  .section-header h3{
+    margin: 1rem;
+    text-align: center;
+  }
+
+  i{
+    position: absolute;
   }
