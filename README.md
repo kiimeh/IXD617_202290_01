@@ -13,3 +13,5 @@ IXD 617 Advanced Tech: Mobile Web
 
 - https://ekimdesigns.com/aau/IXD617/profile/
 - https://ekimdesigns.com/ekim/aau/IXD617/csszengarden/
+- https://ekimdesigns.com/ekim/aau/IXD617/screenshots/midterm/
+
