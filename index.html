@@ -38,6 +38,10 @@
     <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
         <div class="flex-stretch signin-hero">
+          <div class="login-text">
+            <h1 class="loging-heading">Welcome back 👋</h1>
+            <p class="login-para">We are happy to see you again. To use your account, please log in first.</p>
+          </div>
           <div class="back"></div>
           <!-- <img src="images/background1.png" alt="" class="hero-icon"> -->
         </div>
@@ -126,22 +130,24 @@
         <div class="section-header"><h3><i style='font-size:18px' class='fas'>&#xf3c5;</i>Los Angeles</h3></div>
         <div class="container">
           <img src="images/plastic.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#trash-profile-page">Plastic</a></div>
+          <div class="centered-text">
+            <a href="#trash-profile-page">Plastic<br><span class="small-para">Tracking: 3,627</span></a>
+          </div>
         </div>
 
         <div class="container containerEdit">
           <img src="images/foodwaste.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#">Food Waste</a></div>
+          <div class="centered-text"><a href="#">Food Waste<br><span class="small-para">Tracking: 5,212</span></a></div>
         </div>
 
         <div class="container containerEdit">
           <img src="images/glass.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#">Glass</a></div>
+          <div class="centered-text"><a href="#">Glass<br><span class="small-para">Tracking: 2,104</span></a></div>
         </div>
 
         <div class="container containerEdit">
           <img src="images/paper.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#">Paper</a></div>
+          <div class="centered-text"><a href="#">Paper<br><span class="small-para">Tracking: 6,490</span></a></div>
         </div>
 
         <div class="floater bottom right">
@@ -159,7 +165,7 @@
       <div id="list-add-modal" class="modal">
         <div class="modal-back" data-deactivate="#list-add-modal"></div>
         <div class="modal-popup">
-            <div class="modal-head">Add New Location</div>
+            <div class="modal-head"><a href="#trash-profile-page">Add New Location</a></div>
             <div class="modal-body">Cancel</div>
             <!-- <div class="modal-foot">Foot</div> -->
         </div>
@@ -181,7 +187,7 @@
       <div data-role="main">
         <div class="container2">
           <img src="images/plasticTrash.jpg" alt="">
-          <div class="center-profile">Total plastics found <br> in this location:     <br><button class="btn-detail">3,627</button>
+          <div class="center-profile">Total plastics found <br> in this city:<br><button class="btn-detail">3,627</button>
           </div>
           <div class="bottom-left">Plastic waste<p class="bottom-paragraph"><i class="fa-sharp fa-solid fa-location-dot"></i>Los Angeles, CA</p>
           </div>
@@ -249,15 +255,19 @@
         <ul>
           <li><a href="#" data-rel="back">Back</a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#trash-history-page">History</a></li>
         </ul>
       </header>
 
       <div data-role="main">
         <div class="textarea-container">
-          <img src="images/thegrovedetail.jpeg" alt="" class="containerimage">
+          <img src="images/thegrovedetail.jpeg" alt="The Grove" style="width:100%; height: 110vh;">
           <div class="textarea">
-            <h4>Nature</h4>
+            <h4 class="trash-total-text">At The Grove, there are 565 trash has been tracked.</h4>
+
+            <div class="form-control form-control-history">
+              <a href="#recent-page"><input type="submit" class="form-button button-totalpage" value="Home" data-role="none" style="color: white"></a>
+
+            </div>
           </div>
         </div>
       </div>
@@ -266,12 +276,32 @@
 
 
     <!-- USER PROFILE PAGE -->
-    <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-        <h1>User Profile</h1>
-        <div>
-          <a href="#" class="js-logout">Log out</a>
+    <section class="body-profile" data-role="page" id="user-profile-page">
+      <div data-role="main" class="overscroll">
+        <div class="bg"></div>
+
+        <div class="container-profile">
+          <h1>Jimmy Hans</h1>
+          <div class="row">
+            <div class="column">
+              <h4>Tracked</h4>
+              <p>1,320 Trash has been tracked.</p>
+            </div>
+            <div class="column">
+              <h4>Rate</h4>
+              <p>⭐️ 4.8</p>
+            </div>
+            <div class="column">
+              <h4>Status</h4>
+              <p>🟢 Active</p>
+            </div>
+          </div>
+
+          <div class="dialog"><p>My name is Jimmy. I am tracking trash because I want to make our neighborhood clean.</p></div>
+          <a href="#" class="js-logout logout">Log out</a>
         </div>
+
+
       </div>
 
       <footer data-role="footer">
