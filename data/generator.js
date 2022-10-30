@@ -20,7 +20,7 @@ const getTrash = () => (new Array(50)).fill(0).map((o,i)=>{
     o.id = i + 1;
     o.user_id = chance.natural({min:1, max:10});
     o.name = chance.first();
-    o.type = chance.pickone(['plastic', 'foodwaste', 'paper']);
+    o.type = chance.pickone(['plastic', 'foodwaste', 'glass', 'paper']);
     o.description= chance.sentence();
     o.img = `https://via.placeholder.com/${num()}x${num()}/${hex()}/fff/?text=${o.name}`;
     o.weight = chance.integer({min:-10, max: 10})
