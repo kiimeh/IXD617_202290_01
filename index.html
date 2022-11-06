@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="src/css/app.css"/>
     <link rel="stylesheet" href="https://use.typekit.net/qmk4zjg.css">
 
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="lib/js/jquery-2.2.4.min.js"></script>
-    <script src="src/js/app.js"></script>
-    <script src="src/js/signin.js"></script>
+    <script src="src/js/app.js" type="module"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
@@ -127,32 +125,10 @@
         <h1 class="head">Recently Found Trash List</h1>
       </header>
       <div data-role="main" class="overscroll">
-        <div class="section-header"><h3><i style='font-size:18px' class='fas'>&#xf3c5;</i>Los Angeles</h3></div>
-        <div class="container">
-          <img src="images/plastic.jpg" alt="" class="image">
-          <div class="centered-text">
-            <a href="#trash-profile-page">Plastic<br><span class="small-para">Tracking: 3,627</span></a>
+        <div class="trashlist-main"></div>
+          <div class="floater bottom right">
+            <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
           </div>
-        </div>
-
-        <div class="container containerEdit">
-          <img src="images/foodwaste.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#">Food Waste<br><span class="small-para">Tracking: 5,212</span></a></div>
-        </div>
-
-        <div class="container containerEdit">
-          <img src="images/glass.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#">Glass<br><span class="small-para">Tracking: 2,104</span></a></div>
-        </div>
-
-        <div class="container containerEdit">
-          <img src="images/paper.jpg" alt="" class="image">
-          <div class="centered-text"><a href="#">Paper<br><span class="small-para">Tracking: 6,490</span></a></div>
-        </div>
-
-        <div class="floater bottom right">
-          <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
-        </div>
       </div>
       <footer data-role="footer">
         <ul>
@@ -174,7 +150,7 @@
 
 
     <!-- Trash (plastic) Detail PAGE -->
-    <section data-role="page" id="trash-profile-page">
+    <!-- <section data-role="page" id="trash-profile-page">
       <header data-role="header">
         <h1>Trash Detail</h1>
         <ul>
@@ -193,12 +169,12 @@
           </div>
             <form class="form form-profile" data-ajax="false">
               <div class="form-control">
-                <label class="form-label" for="signin-username">Date you found:</label>
-                <input class="form-input" type="date" id="signin-username" data-role="none">
+                <label class="form-label" for="signintrash-username">Date you found:</label>
+                <input class="form-input" type="date" id="signintrash-username" data-role="none">
               </div>
               <div class="form-control">
-                <label class="form-label" for="signin-password">Address where the plastic has found:</label>
-                <input class="form-input" type="text" id="signin-password" data-role="none" placeholder="Street address">
+                <label class="form-label" for="signintrash-password">Address where the plastic has found:</label>
+                <input class="form-input" type="text" id="signintrash-password" data-role="none" placeholder="Street address">
               </div>
 
               <div class="form-control">
@@ -212,7 +188,7 @@
             </form>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
 
@@ -276,32 +252,40 @@
 
 
     <!-- USER PROFILE PAGE -->
-    <section class="body-profile" data-role="page" id="user-profile-page">
-      <div data-role="main" class="overscroll">
-        <div class="bg"></div>
+    <section data-role="page" id="user-profile-page">
+      <div data-role="main" class="overscroll"></div>
+      <footer data-role="footer">
+        <ul>
+          <li><a href="#recent-page">Recent</a></li>
+          <li><a href="#list-page">List</a></li>
+          <li><a href="#user-profile-page">Profile</a></li>
+        </ul>
+      </footer>
+    </section>
 
-        <div class="container-profile">
-          <h1>Jimmy Hans</h1>
-          <div class="row">
-            <div class="column">
-              <h4>Tracked</h4>
-              <p>1,320 Trash has been tracked.</p>
-            </div>
-            <div class="column">
-              <h4>Rate</h4>
-              <p>⭐️ 4.8</p>
-            </div>
-            <div class="column">
-              <h4>Status</h4>
-              <p>🟢 Active</p>
-            </div>
-          </div>
 
-          <div class="dialog"><p>My name is Jimmy. I am tracking trash because I want to make our neighborhood clean.</p></div>
-          <a href="#" class="js-logout logout">Log out</a>
+    <!-- TRASH PROFILE PAGE -->
+    <section data-role="page" id="trash-profile-page">
+      <header data-role="header">
+        <h1></h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#animal-edit-page">Edit</a></li>
+        </ul>
+      </header>
+      <div data-role="main">
+        <div class="trash-profile-top"></div>
+        <div class="trash-profile-nav">
+          <div class="nav-link active">Map</div>
+          <div class="nav-link">Description</div>
         </div>
-
-
+        <div class="trash-profile-bottom">
+          <div class="trash-profile-section section-map active">
+            <div class="map"></div>
+          </div>
+          <div class="trash-profile-section section-description"></div>
+        </div>
       </div>
 
       <footer data-role="footer">
@@ -313,6 +297,6 @@
       </footer>
     </section>
 
-    <script src="https://kit.fontawesome.com/855a6c101f.js" crossorigin="anonymous"></script>
+
   </body>
 </html>
