@@ -35,7 +35,7 @@ export const TrashProfilePage = async() => {
     });
     let [trash] = trashes;
     $(".trash-profile-top").css({"background-image":`url(${trash.img})`})
-    $("#trash-profile-page h1").html(trash.name);
+    $("#trash-profile-page h1").html(trash.type);
     $("#trash-profile-page .section-description").html(makeTrashProfileDescription(trash));
 
     let {result:locations} = await query({

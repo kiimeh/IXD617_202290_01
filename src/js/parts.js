@@ -1,11 +1,10 @@
 import { templater } from "./functions.js";
 
 
-export const makeTrashList = templater(({id,name,type,weight,img})=>`
+export const makeTrashList = templater(({id,type,weight,img})=>`
 <a class="trashlist-item trash-jump" href="#trash-profile-page" data-id="${id}">
     <div class="trashlist-item-image"><img src="${img}"></div>
     <div class= "trashlist-body">
-        <div class= "trashlist-name">${name}</div>
         <div class= "trashlist-type">${type}</div>
         <div class= "trashlist-weight">${weight}</div>
     </div>
