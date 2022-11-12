@@ -1,5 +1,5 @@
 import { query } from "./functions.js"
-import { makeMap } from "./maps.js";
+import { makeMap, makeMarkers } from "./maps.js";
 import { makeTrashList, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
 
 
@@ -35,7 +35,14 @@ export const RecentPage = async() => {
     });
     console.log(trash_locations);
 
-    makeMap("#recent-page .map");
+    let valid_trash = trash_locations.reduce((r,o) => {
+        o.icon = o.img;
+        if(o.lat && o.lng) r.push(o);
+        return r;
+    },[])
+
+    let map_el = await makeMap("#recent-page .map");
+    makeMarkers(map_el,valid_trash);
 
 }
 
@@ -78,4 +85,7 @@ export const TrashProfilePage = async() => {
         params:[sessionStorage.trashId]
     });
     console.log(locations)
+
+    let map_el = await makeMap("#trash-profile-page .map");
+    makeMarkers(map_el,locations);
 }

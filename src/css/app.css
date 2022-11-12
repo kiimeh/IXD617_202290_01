@@ -755,7 +755,7 @@ a.logout{
     text-align: center;
 }
 .nav-link.active{
-    background-color: var(--color-main-light);
+    background-color: #B8AB9B;
 }
 .trash-profile-bottom{
     position: relative;
