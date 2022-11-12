@@ -1,8 +1,43 @@
 import { query } from "./functions.js"
+import { makeMap } from "./maps.js";
 import { makeTrashList, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
 
 
-export const RecentPage = async() => {}
+export const RecentPage = async() => {
+    // let {result:trash} = await query({
+    //     type:"trash_locations_by_user_id", 
+    //     params:[sessionStorage.userId]
+    // });
+
+//     console.log(trash);
+
+//     let my_trash_ids = [...new Set(trash.map(o=>o.trash_id))];
+//     console.log(my_trash_ids);
+//     let last_locations = my_trash_ids.map(id=>{
+//         let locations = trash.filter(o=>id===o.trash_id);
+//         locations.sort((a,b) => {
+//             if (a.date_create > b.date_create){
+//                 return 1;
+//             }
+//             if (a.date_create < b.date_create) {
+//                 return -1;
+//             }
+//             return 0;
+//         });
+//         return locations.slice(-1)[0];
+//     })
+//     console.log(last_locations);
+// 
+
+    let {result:trash_locations} = await query({
+        type:"recent_trash_locations", 
+        params:[sessionStorage.userId]
+    });
+    console.log(trash_locations);
+
+    makeMap("#recent-page .map");
+
+}
 
 export const ListPage = async() => {
 
