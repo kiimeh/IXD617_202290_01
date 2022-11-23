@@ -100,24 +100,33 @@
       <div data-role="main">
         <div class="map"></div>
 
-        <!-- <div class="floater top right">
+        <div class="floater bottom right">
           <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
-        </div> -->
+        </div>
 
-        <div id="recent-add-modal" class="modal">
-          <div class="modal-back" data-deactivate="#recent-add-modal"></div>
-          <div class="modal-drawer right">
-              <div class="modal-head">Add New Location</div>
-              <div class="modal-body">Cancel</div>
-              <div class="modal-foot">Cancel</div>
+        <div id="map-recent-modal" class="modal">
+          <div class="modal-back" data-deactivate="#map-recent-modal"></div>
+          <div class="modal-drawer island top">
+              <div class="modal-body"></div>
           </div>
         </div>
       </div>
       <footer data-role="footer">
         <ul>
-          <li><a href="#recent-page">Recent</a></li>
-          <li><a href="#list-page">List</a></li>
-          <li><a href="#user-profile-page">Profile</a></li>
+          <li><a href="#recent-page">
+            <span class="footer-icon"><img src="images/icons/map-location-dot-solid.svg"class="icon" alt="map-icon"></span>
+            <span class="footer-label">Recent</span>
+          </a></li>
+
+          <li><a href="#list-page">
+            <span class="footer-icon"><img src="images/icons/trash-arrow-up-solid.svg" class="icon" alt="trash-icon"></span>
+            <span class="footer-label">List</span>
+            </a></li>
+
+          <li><a href="#user-profile-page">
+            <span class="footer-icon"><img src="images/icons/user-solid.svg" class="icon" alt="user-icon"></span>
+            <span class="footer-label">Profile</span>
+            </a></li>
         </ul>
       </footer>
 
@@ -137,9 +146,20 @@
       </div>
       <footer data-role="footer">
         <ul>
-          <li><a href="#recent-page">Recent</a></li>
-          <li><a href="#list-page">List</a></li>
-          <li><a href="#user-profile-page">Profile</a></li>
+          <li><a href="#recent-page">
+            <span class="footer-icon"><img src="images/icons/map-location-dot-solid.svg"class="icon" alt="map-icon"></span>
+            <span class="footer-label">Recent</span>
+          </a></li>
+
+          <li><a href="#list-page">
+            <span class="footer-icon"><img src="images/icons/trash-arrow-up-solid.svg" class="icon" alt="trash-icon"></span>
+            <span class="footer-label">List</span>
+            </a></li>
+
+          <li><a href="#user-profile-page">
+            <span class="footer-icon"><img src="images/icons/user-solid.svg" class="icon" alt="user-icon"></span>
+            <span class="footer-label">Profile</span>
+            </a></li>
         </ul>
       </footer>
 
@@ -258,7 +278,15 @@
 
     <!-- USER PROFILE PAGE -->
     <section data-role="page" id="user-profile-page">
-      <div data-role="main" class="overscroll"></div>
+      <div data-role="main" class="overscroll">
+        <div class="body"></div>
+
+        <div class="floater top right">
+          <a href="#user-settings-page">
+            <img src="icon" src="images" alt="">
+          </a>
+        </div>
+      </div>
       <footer data-role="footer">
         <ul>
           <li><a href="#recent-page">Recent</a></li>
@@ -266,6 +294,22 @@
           <li><a href="#user-profile-page">Profile</a></li>
         </ul>
       </footer>
+    </section>
+
+    <!-- USER SETTINGS PAGE -->
+    <section data-role="page" id="user-settings-page">
+      <header data-role="header">
+        <h1></h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+        </ul>
+      </header>
+      <div data-role="main" class="overscroll">
+        settings
+        <div class="settings"></div>
+
+      <a href="#" class="js-logout">Log out</a>
+
     </section>
 
 

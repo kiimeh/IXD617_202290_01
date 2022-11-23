@@ -1,4 +1,4 @@
-import { ListPage, RecentPage, TrashProfilePage, UserProfilePage } from "./routes.js";
+import { ChooseLocationPage, ListPage, RecentPage, TrashProfilePage, UserProfilePage } from "./routes.js";
 import { checkSigninForm, checkUserId } from "./signin.js";
 
 //Document Ready
@@ -16,6 +16,7 @@ $(() => {
             case "list-page": ListPage(); break;
             case "user-profile-page": UserProfilePage(); break;
             case "trash-profile-page": TrashProfilePage(); break;
+            case "choose-location-page": ChooseLocationPage(); break;
         }
     })
 

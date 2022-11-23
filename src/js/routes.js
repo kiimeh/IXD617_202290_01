@@ -1,34 +1,9 @@
 import { query } from "./functions.js"
 import { makeMap, makeMarkers } from "./maps.js";
-import { makeTrashList, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
+import { makeTrashList, makeTrashMapDescription, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
 
 
 export const RecentPage = async() => {
-    // let {result:trash} = await query({
-    //     type:"trash_locations_by_user_id", 
-    //     params:[sessionStorage.userId]
-    // });
-
-//     console.log(trash);
-
-//     let my_trash_ids = [...new Set(trash.map(o=>o.trash_id))];
-//     console.log(my_trash_ids);
-//     let last_locations = my_trash_ids.map(id=>{
-//         let locations = trash.filter(o=>id===o.trash_id);
-//         locations.sort((a,b) => {
-//             if (a.date_create > b.date_create){
-//                 return 1;
-//             }
-//             if (a.date_create < b.date_create) {
-//                 return -1;
-//             }
-//             return 0;
-//         });
-//         return locations.slice(-1)[0];
-//     })
-//     console.log(last_locations);
-// 
-
     let {result:trash_locations} = await query({
         type:"recent_trash_locations", 
         params:[sessionStorage.userId]
@@ -43,6 +18,30 @@ export const RecentPage = async() => {
 
     let map_el = await makeMap("#recent-page .map");
     makeMarkers(map_el,valid_trash);
+
+    map_el.data("markers").forEach((m,i)=>{
+        //console.log(m);
+        m.addListener("click", function(e){
+            //console.log(e)
+            let trash = valid_trash[i];
+            //console.log(trash)
+
+            //Just Navigate
+            // sessionStorage.trashId = trash.trash_id;
+            // $.mobile.navigate("#trash-profile-page")
+
+            //Open Google InfoWindow
+            // let {map,infoWindow} = map_el.data();
+            // infoWindow.open(map, m);
+            // infoWindow.setContent(makeTrashMapDescription(trash));
+
+            $("#map-recent-modal")
+                .addClass("active")
+                .find(".modal-body")
+                .html(makeTrashMapDescription(trash))
+
+        })
+    });
 
 }
 
@@ -67,7 +66,7 @@ export const UserProfilePage = async() => {
 
     console.log(user)
 
-    $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user))
+    $("#user-profile-page .body").html(makeUserProfilePage(user))
 }
 
 export const TrashProfilePage = async() => {
@@ -88,4 +87,9 @@ export const TrashProfilePage = async() => {
 
     let map_el = await makeMap("#trash-profile-page .map");
     makeMarkers(map_el,locations);
+}
+
+export const ChooseLocationPage = async() => {
+    let map_el = await makeMap("#choose-location-page .map");
+    makeMarkers(map_el,[]);
 }
