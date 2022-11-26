@@ -173,106 +173,62 @@
       </div>
     </section>
 
-
-    <!-- Trash (plastic) Detail PAGE -->
-    <!-- <section data-role="page" id="trash-profile-page">
+    <!-- Choose Trash Page -->
+    <section data-role="page" id="choose-trash-page">
       <header data-role="header">
-        <h1>Trash Detail</h1>
-        <ul>
-          <li><a href="#" data-rel="back">Back</a></li>
-          <li class="flex-stretch"></li>
-          <li><a href="#trash-history-page">History</a></li>
-        </ul>
+          <h1>Choose trash</h1>
+          <ul>
+              <li><a href="#" data-rel="back">Back</a></li>
+              <li class="flex-stretch"></li>
+              <li><a href="#choose-location-page">Next</a></li>
+          </ul>
       </header>
-
       <div data-role="main">
-        <div class="container2">
-          <img src="images/plasticTrash.jpg" alt="">
-          <div class="center-profile">Total plastics found <br> in this city:<br><button class="btn-detail">3,627</button>
-          </div>
-          <div class="bottom-left">Plastic waste<p class="bottom-paragraph"><i class="fa-sharp fa-solid fa-location-dot"></i>Los Angeles, CA</p>
-          </div>
-            <form class="form form-profile" data-ajax="false">
-              <div class="form-control">
-                <label class="form-label" for="signintrash-username">Date you found:</label>
-                <input class="form-input" type="date" id="signintrash-username" data-role="none">
-              </div>
-              <div class="form-control">
-                <label class="form-label" for="signintrash-password">Address where the plastic has found:</label>
-                <input class="form-input" type="text" id="signintrash-password" data-role="none" placeholder="Street address">
-              </div>
-
-              <div class="form-control">
-                <label class="form-label" for="signin-password">Any Comments?</label>
-                <textarea name="message" id="">Your Comment</textarea>
-              </div>
-
-              <div class="form-control form-control-profile">
-                <input type="submit" class="form-button" value="Save Location" data-role="none" style="color: white">
-              </div>
-            </form>
-        </div>
+          <input type="hidden" id="location-trash-id">
+          <input type="hidden" id="location-back" value="-2">
+          form for choose trash
       </div>
-    </section> -->
+  </section>
 
 
 
-    <!-- Trash History Page -->
-    <section data-role="page" id="trash-history-page">
+
+  <!-- CHOOSE LOCATION PAGE -->
+  <section data-role="page" id="choose-location-page">
       <header data-role="header">
-        <h1>Trash History</h1>
-        <ul>
-          <li><a href="#" data-rel="back">Back</a></li>
-          <li class="flex-stretch"></li>
-        </ul>
+          <h1>Choose Location</h1>
+          <ul>
+              <li><a href="#" data-rel="back">Back</a></li>
+              <li class="flex-stretch"></li>
+              <li><a href="#choose-description-page">Next</a></li>
+          </ul>
       </header>
-
-      <div class="container-history">
-        <div class="circle one"><span class="trash-history-text"><a href="#trash-total-location" class="alink">The Grove</a></span></div>
-        <div class="circle two"><span class="trash-history-text">LAX</span></div>
-      </div>
-
-      <div class="container-history">
-        <div class="circle circle-next three"><span class="trash-history-text">Venice Beach</span></div>
-        <div class="circle circle-next four"><span class="trash-history-text">Beverly Hills</span></div>
-      </div>
-
-      <div class="container-history">
-        <div class="circle circle-next five"><span class="trash-history-text">Santa Monica Beach</span></div>
-        <div class="circle circle-next six"><span class="trash-history-text">Hollywood</span></div>
-      </div>
-
-
-      <div class="form-control form-control-history">
-        <input type="submit" class="form-button" value="Edit" data-role="none" style="color: white">
-      </div>
-    </section>
-
-
-    <!-- Trash Total page-->
-    <section data-role="page" id="trash-total-location">
-      <header data-role="header">
-        <h1>Trash Detail</h1>
-        <ul>
-          <li><a href="#" data-rel="back">Back</a></li>
-          <li class="flex-stretch"></li>
-        </ul>
-      </header>
-
       <div data-role="main">
-        <div class="textarea-container">
-          <img src="images/thegrovedetail.jpeg" alt="The Grove" style="width:100%; height: 110vh;">
-          <div class="textarea">
-            <h4 class="trash-total-text">At The Grove, there are 565 trash has been tracked.</h4>
-
-            <div class="form-control form-control-history">
-              <a href="#recent-page"><input type="submit" class="form-button button-totalpage" value="Home" data-role="none" style="color: white"></a>
-
-            </div>
-          </div>
-        </div>
+          <input type="hidden" id="location-lat">
+          <input type="hidden" id="location-lng">
+          <div class="map"></div>
       </div>
-    </section>
+  </section>
+
+
+
+  <!-- CHOOSE LOCATION PAGE -->
+  <section data-role="page" id="choose-description-page">
+      <header data-role="header">
+          <h1>Description of Trash</h1>
+          <ul>
+              <li><a href="#" data-rel="back">Back</a></li>
+              <li class="flex-stretch"></li>
+              <li><a href="#" class="js-submit-location-add-form">Save</a></li>
+          </ul>
+      </header>
+      <div data-role="main">
+          <div class="padded">
+              <textarea class="form-input" rows="10" id="location-description"></textarea>
+          </div>
+      </div>
+  </section>
+
 
 
 
@@ -283,7 +239,7 @@
 
         <div class="floater top right">
           <a href="#user-settings-page">
-            <img src="icon" src="images" alt="">
+            <img class="icon" src="images/icons/bars-solid.svg" alt="menu-icon">
           </a>
         </div>
       </div>
@@ -296,21 +252,65 @@
       </footer>
     </section>
 
-    <!-- USER SETTINGS PAGE -->
+
+    <!-- USER Settings PAGE -->
     <section data-role="page" id="user-settings-page">
       <header data-role="header">
-        <h1></h1>
+        <h1>Settings</h1>
         <ul>
           <li><a href="#" data-rel="back">Back</a></li>
         </ul>
       </header>
-      <div data-role="main" class="overscroll">
-        settings
-        <div class="settings"></div>
+      <div data-role="main">
+        <div class="settings">
+          <li><a href="#user-edit-page">Edit User</a></li>
+          <li><a href="#password-edit-page">Edit Password</a></li>
+          <li><a href="#" class="js-logout">Log out</a></li>
+        </div>
+      </div>
+    </section> 
 
-      <a href="#" class="js-logout">Log out</a>
+    <!-- USER EDIT PAGE -->
+    <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+        <h1>Edit User</h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#" data-rel="back" class="js-submit-user-edit-form">Submit</a></li>
+        </ul>
+      </header>
+      <form data-role="main" data-ajax="false" id="user-edit-form" class="padded overscroll">
+        <div class="body"></div>
+        <div class="flex-stretch"></div>
 
-    </section>
+      </form>
+    </section> 
+
+    <!-- PASSWORD EDIT PAGE -->
+    <section data-role="page" id="password-edit-page">
+      <header data-role="header">
+        <h1>Edit Password</h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#" class="js-submit-password-edit-form">Submit</a></li>
+        </ul>
+      </header>
+      <form data-role="main" data-ajax="false" id="password-edit-form" class="padded overscroll">
+        <div class="body">
+          <div class="form-control">
+            <label class="form-label" for="password-edit-password">New Password</label>
+            <input class="form-input" type="password" id="password-edit-password" data-role="none" placeholder="Type a new password">
+          </div> 
+
+          <div class="form-control">
+            <label class="form-label" for="password-edit-confirm">Confirm New Password</label>
+            <input class="form-input" type="password" id="password-edit-confirm" data-role="none" placeholder="Type the same password">
+          </div> 
+        </div>
+      </form>
+    </section> 
 
 
     <!-- TRASH PROFILE PAGE -->
@@ -320,7 +320,7 @@
         <ul>
           <li><a href="#" data-rel="back">Back</a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#animal-edit-page">Edit</a></li>
+          <li><a href="#trash-edit-page">Edit</a></li>
         </ul>
       </header>
       <div data-role="main">
@@ -345,6 +345,45 @@
         </ul>
       </footer>
     </section>
+
+
+
+
+   <!-- Trash Edit Page -->
+   <section data-role="page" id="trash-edit-page">
+    <header data-role="header">
+      <h1>Edit Trash</h1>
+      <ul>
+        <li><a href="#" data-rel="back">Back</a></li>
+        <li class="flex-stretch"></li>
+        <li><a href="#" class="js-submit-trash-edit-form">Submit</a></li>
+      </ul>
+    </header>
+    <form data-role="main" data-ajax="false" id="trash-edit-form" class="padded display-flex flex-column full overscroll">
+      <div class="body"></div>
+      <div class="flex-stretch"></div>
+
+    </form>
+  </section> 
+
+
+
+   <!-- Trash ADD Page -->
+  <section data-role="page" id="trash-add-page">
+    <header data-role="header">
+      <h1>Add Trash</h1>
+      <ul>
+        <li><a href="#" data-rel="back">Back</a></li>
+        <li class="flex-stretch"></li>
+        <li><a href="#" class="js-submit-trash-add-form">Submit</a></li>
+      </ul>
+    </header>
+    <form data-role="main" data-ajax="false" id="trash-add-form" class="padded display-flex flex-column full overscroll">
+      <div class="body"></div>
+      <div class="flex-stretch"></div>
+
+    </form>
+  </section> 
 
 
   </body>

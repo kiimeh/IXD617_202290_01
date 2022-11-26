@@ -1,6 +1,6 @@
 import { query } from "./functions.js"
 import { makeMap, makeMarkers } from "./maps.js";
-import { makeTrashList, makeTrashMapDescription, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
+import { makeEditTrashForm, makeEditUserForm, makeTrashList, makeTrashMapDescription, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
 
 
 export const RecentPage = async() => {
@@ -92,4 +92,29 @@ export const TrashProfilePage = async() => {
 export const ChooseLocationPage = async() => {
     let map_el = await makeMap("#choose-location-page .map");
     makeMarkers(map_el,[]);
+}
+
+export const UserEditPage = async() => {
+    let {result:users} = await query({
+        type:"user_by_id", 
+        params:[sessionStorage.userId]
+    });
+
+    let [user] = users;
+
+    $("#user-edit-page .body").html(makeEditUserForm(user));
+}
+
+export const TrashEditPage = async() => {
+    let {result:trashes} = await query({
+        type:"trash_by_id", 
+        params:[sessionStorage.trashId]
+    });
+
+    let [trash] = trashes;
+    
+    $("#trash-edit-page .body").html(makeEditTrashForm({
+        trash,
+        namespace:'trash-edit'
+    }));
 }

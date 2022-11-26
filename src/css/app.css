@@ -141,6 +141,10 @@ a {
 
 .overscroll {overflow: auto;}
 
+.padded{
+    padding: 1em;
+}
+
 
 /* FORMS */
 .form-control{
@@ -698,8 +702,23 @@ p.onboarding-text-para{
     font-weight: 1.5em; 
 }
 
-.icon{
+.icon {
     font-size: 1.4em;
     width: 1em;
     height: 1em;
+}
+
+.settings {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.settings li {
+    padding: 0.5em 1em;
+
+}
+
+.settings li~li {
+    border-top: 1px solid var(--color-neutral-light);
 }

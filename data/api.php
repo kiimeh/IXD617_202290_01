@@ -49,11 +49,11 @@ function makeStatement($data){
         // case "trash_all":
         //     return makeQuery($conn, "SELECT * FROM `track_trash`", $params);
         // case "locations_all":
-        //     return makeQuery($conn, "SELECT * FROM `track_locations`", $params);
+        //     return makeQuery($conn, "SELECT * FROM `track_locations`", $params);\
 
         
         case "user_by_id":
-            return makeQuery($conn, "SELECT id,name,email,username,img,date_create FROM `track_users` WHERE `id` = ?", $params);
+            return makeQuery($conn, "SELECT `id`,`name`,`email`,`username`,`img`,`date_create` FROM `track_users` WHERE `id` = ?", $params);
         case "trash_by_id":
             return makeQuery($conn, "SELECT * FROM `track_trash` WHERE `id` = ?", $params);
         case "location_by_id":
@@ -96,6 +96,83 @@ function makeStatement($data){
             WHERE `user_id` = ?
             ORDER BY l.trash_id, l.date_create DESC
             ", $params);    
+
+
+
+
+
+        // INSERT
+        
+        case "insert_trash":
+            $result = makeQuery($conn, "INSERT INTO
+            `track_trash`
+            (
+                `user_id`,
+                `type`,
+                `weight`,
+                `description`,
+                `img`,
+                `date_create`
+            )
+            VALUES
+            (
+                ?,
+                ?,
+                ?,
+                ?,
+                'https://via.placeholder.com/400/?text=TRASH',
+                NOW()
+            )
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];
+
+
+
+
+
+        // UPDATE
+
+        case "update_user":
+            $result = makeQuery($conn, "UPDATE
+            `track_users`
+            SET
+                `name` = ?,
+                `username` = ?,
+                `email` = ?
+            WHERE `id` = ?
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];
+
+        case "update_password":
+            $result = makeQuery($conn, "UPDATE
+            `track_users`
+            SET
+                `password` = md5(?)
+            WHERE `id` = ?
+            ", $params, false);
+    
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];     
+
+
+        case "update_trash":
+            $result = makeQuery($conn, "UPDATE
+            `track_trash`
+            SET
+                `type` = ?,
+                `weight` = ?,
+                `description` = ?
+            WHERE `id` = ?
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];
+
+        // DELETE
 
 
 
