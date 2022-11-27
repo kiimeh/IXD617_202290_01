@@ -23,10 +23,11 @@ export const makeUserProfilePage = ({name,email,username,img})=>`
 </div>
 `
 
-export const makeTrashProfileDescription = ({type,date_create,weight})=>`
+export const makeTrashProfileDescription = ({type,date_create,weight,description})=>`
 <h2>${type}</h2>
 <div>${date_create}</div>
 <div>${weight}</div>
+<div>${description}</div>
 `
 
 

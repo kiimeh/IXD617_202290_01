@@ -89,9 +89,17 @@ export const TrashProfilePage = async() => {
     makeMarkers(map_el,locations);
 }
 
+
+
 export const ChooseLocationPage = async() => {
     let map_el = await makeMap("#choose-location-page .map");
     makeMarkers(map_el,[]);
+    map_el.data("map").addListener("click", function(e){
+        console.log(e)
+        $("#location-lat").val(e.latLng.lat());
+        $("#location-lng").val(e.latLng.lng());
+        makeMarkers(map_el,[e.latLng]);
+    })
 }
 
 export const UserEditPage = async() => {
@@ -104,6 +112,25 @@ export const UserEditPage = async() => {
 
     $("#user-edit-page .body").html(makeEditUserForm(user));
 }
+
+
+
+
+export const TrashAddPage = async() => {
+    $("#trash-add-page .body").html(makeEditTrashForm({
+        trash:{
+            type:'',
+            weight:'',
+            description:'',
+            date_create:'',
+        },
+        namespace:'trash-add'
+    }));
+}
+
+
+
+
 
 export const TrashEditPage = async() => {
     let {result:trashes} = await query({

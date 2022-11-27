@@ -103,6 +103,39 @@ function makeStatement($data){
 
         // INSERT
         
+        case "insert_user":
+            $result = makeQuery($conn, "SELECT `id`
+            FROM `track_users` 
+            WHERE `username`=? OR `email`=?
+            ", [$params[0], $params[1]]);
+            if(count($result['result']) > 0)
+                return ["error" => "Username or Email already in use"];
+
+
+            $result = makeQuery($conn, "INSERT INTO
+            `track_users`
+            (
+                `username`,
+                `email`,
+                `password`,
+                `img`,
+                `date_create`
+            )
+            VALUES
+            (
+                ?,
+                ?,
+                md5(?),
+                'https://via.placeholder.com/400/?text=USER',
+                NOW()
+            )
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["id" => $conn->lastInsertId()];
+
+
+
         case "insert_trash":
             $result = makeQuery($conn, "INSERT INTO
             `track_trash`
@@ -121,6 +154,34 @@ function makeStatement($data){
                 ?,
                 ?,
                 'https://via.placeholder.com/400/?text=TRASH',
+                NOW()
+            )
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];
+
+
+        case "insert_location":
+            $result = makeQuery($conn, "INSERT INTO
+            `track_locations`
+            (
+                `trash_id`,
+                `lat`,
+                `lng`,
+                `description`,
+                `photo`,
+                `icon`,
+                `date_create`
+            )
+            VALUES
+            (
+                ?,
+                ?,
+                ?,
+                ?,
+                'https://via.placeholder.com/400/?text=PHOTO',
+                'https://via.placeholder.com/400/?text=ICON',
                 NOW()
             )
             ", $params, false);
@@ -174,6 +235,23 @@ function makeStatement($data){
 
         // DELETE
 
+        case "delete_trash":
+            $result = makeQuery($conn, "DELETE FROM
+            `track_trash`
+            WHERE `id` = ?
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];
+
+        case "delete_location":
+            $result = makeQuery($conn, "DELETE FROM
+            `track_locations`
+            WHERE `id` = ?
+            ", $params, false);
+
+            if(isset($result['error'])) return $result;
+            return ["result" => "Success"];
 
 
         case "check_signin":

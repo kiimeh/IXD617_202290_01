@@ -1,5 +1,35 @@
 import { query } from "./functions.js";
 
+export const checkSignupForm = () => {
+    let username = $("#signup-username").val();
+    let email = $("#signup-email").val();
+    let password = $("#signup-password").val();
+    let confirm = $("#signup-confirm").val();
+
+    if(password !== confirm) {
+        //tell user to try again
+        throw("password failed, show the user") 
+        return;
+    }
+
+    query({
+        type: 'insert_user',
+        params:[
+            username, 
+            email, 
+            password
+        ]
+    }).then((data) => {
+        if(data.error) {
+            throw(data.error);
+            //We should show how they failed to them 
+        }else {
+            sessionStorage.userId = data.id;
+            $.mobile.navigate("#list-page");
+        }
+    })
+}
+
 
 
 export const checkUserEditForm = () => {
@@ -96,3 +126,41 @@ export const checkTrashEditForm = () => {
     })
 }
 
+
+
+export const checkTrashDeleteForm = () => {
+    query({
+        type: "delete_trash",
+        params: [sessionStorage.trashId]
+    }).then ((data) => {
+        if(data.error) {
+            throw(data.error);
+        }else {
+            window.history.back();
+        }
+    })
+}
+
+
+
+export const checkLocationAddForm = () => {
+    let trashid = $("#location-trash-id").val();
+    let lat = $("#location-lat").val();
+    let lng = $("#location-lng").val();
+    let description = $("#location-description").val();
+
+    let back = +$("#location-back").val();
+
+
+    query({
+        type: "insert_location",
+        params: [trashid, lat, lng, description]
+    }).then ((data) => {
+        if(data.error) {
+            throw(data.error);
+        }else {
+            window.history.go(back);
+        }
+    })
+
+}

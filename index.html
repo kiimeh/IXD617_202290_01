@@ -74,18 +74,22 @@
         <form class="form" id="signup-form" data-ajax="false">
           <div class="form-control">
             <label class="form-label" for="signup-username">Username</label>
-            <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Type your Username">
+            <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Type your Username" required>
+          </div>
+          <div class="form-control">
+            <label class="form-label" for="signup-email">Email</label>
+            <input class="form-input" type="email" id="signup-email" data-role="none" placeholder="Type your Email" required>
           </div>
           <div class="form-control">
             <label class="form-label" for="signup-password">Type a Password</label>
-            <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Type your Password">
+            <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Type your Password" required>
           </div>
           <div class="form-control">
             <label class="form-label" for="signup-confirm">Confirm Password</label>
-            <input class="form-input" type="password" id="signup-confirm" data-role="none" placeholder="Type your Password">
+            <input class="form-input" type="password" id="signup-confirm" data-role="none" placeholder="Type your Password" required>
           </div>
           <div class="form-control">
-            <input type="submit" class="form-button" value="Click me" data-role="none">
+            <input type="submit" class="form-button" value="Complete Sign Up" data-role="none">
           </div>
           <div class="form-control" style="text-align: center; font-size:0.7em">
             Already have an account? <a href="#signin-page">Sign In!</a>
@@ -101,7 +105,7 @@
         <div class="map"></div>
 
         <div class="floater bottom right">
-          <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
+          <a href="#choose-trash-page" class="btn-circle">&plus;</a>
         </div>
 
         <div id="map-recent-modal" class="modal">
@@ -136,12 +140,12 @@
     <!-- Trash LIST PAGE -->
     <section data-role="page" id="list-page">
       <header data-role="header">
-        <h1 class="head">Recently Found Trash List</h1>
+        <h1>Recently Found Trash List</h1>
       </header>
       <div data-role="main" class="overscroll">
         <div class="trashlist-main"></div>
           <div class="floater bottom right">
-            <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+            <a href="#trash-add-page" class="btn-circle">&plus;</a>
           </div>
       </div>
       <footer data-role="footer">
@@ -166,9 +170,9 @@
       <div id="list-add-modal" class="modal">
         <div class="modal-back" data-deactivate="#list-add-modal"></div>
         <div class="modal-popup">
-            <div class="modal-head"><a href="#trash-profile-page">Add New Location</a></div>
-            <div class="modal-body">Cancel</div>
-            <!-- <div class="modal-foot">Foot</div> -->
+            <div class="modal-head">Head</div>
+            <div class="modal-body">Body</div>
+            <div class="modal-body">Foot</div>
         </div>
       </div>
     </section>
@@ -184,8 +188,8 @@
           </ul>
       </header>
       <div data-role="main">
-          <input type="hidden" id="location-trash-id">
-          <input type="hidden" id="location-back" value="-2">
+        <input type="hidden" id="location-trash-id">
+        <input type="hidden" id="location-back" value="-2">
           form for choose trash
       </div>
   </section>
@@ -223,9 +227,9 @@
           </ul>
       </header>
       <div data-role="main">
-          <div class="padded">
-              <textarea class="form-input" rows="10" id="location-description"></textarea>
-          </div>
+        <div class="padded">
+          <textarea class="form-input" rows="10" id="location-description"></textarea>
+        </div>
       </div>
   </section>
 
@@ -324,7 +328,11 @@
         </ul>
       </header>
       <div data-role="main">
-        <div class="trash-profile-top"></div>
+        <div class="trash-profile-top">
+          <div class="floater bottom right">
+            <a href="#" class="js-trash-delete"><img class="icon" src="images/icons/trash-can-regular.svg" alt="trash icon" style="font-size:1.6em"></a>
+          </div>
+        </div>
         <div class="trash-profile-nav">
           <div class="nav-link active">Map</div>
           <div class="nav-link">Description</div>
@@ -332,6 +340,11 @@
         <div class="trash-profile-bottom">
           <div class="trash-profile-section section-map active">
             <div class="map"></div>
+
+            <div class="floater bottom right">
+              <a href="#choose-location-page" class="btn-circle js-choose-trash-for-location">&plus;</a>
+            </div>
+
           </div>
           <div class="trash-profile-section section-description"></div>
         </div>
@@ -379,9 +392,8 @@
       </ul>
     </header>
     <form data-role="main" data-ajax="false" id="trash-add-form" class="padded display-flex flex-column full overscroll">
-      <div class="body"></div>
-      <div class="flex-stretch"></div>
 
+      <div class="body"></div>
     </form>
   </section> 
 

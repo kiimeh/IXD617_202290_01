@@ -216,14 +216,6 @@ a {
 #signin-form,
 #signup-form{
     padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    top:30%;
 }
 
 /* .signin-hero {
@@ -256,7 +248,7 @@ h1 .head{
 .floater { position:absolute; }
 .floater.top { top: 1rem; }
 .floater.right { right: 1rem; }
-.floater.bottom { bottom: 5rem; position: fixed;}
+.floater.bottom { bottom: 1rem;}
 .floater.left { left: 1rem; }
 
 .btn-circle {
@@ -646,6 +638,11 @@ p.onboarding-text-para{
 .nav-link.active{
     background-color: #B8AB9B;
 }
+
+.trash-profile-top {
+    position: relative;
+}
+
 .trash-profile-bottom{
     position: relative;
     flex: 1 1 100%;

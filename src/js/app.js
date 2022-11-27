@@ -1,5 +1,6 @@
-import { checkPasswordEditForm, checkTrashAddForm, checkTrashEditForm, checkUserEditForm } from "./forms.js";
-import { ChooseLocationPage, ListPage, RecentPage, TrashEditPage, TrashProfilePage, UserEditPage, UserProfilePage } from "./routes.js";
+import { checkLocationAddForm, checkPasswordEditForm, checkSignupForm, checkTrashAddForm, checkTrashDeleteForm, checkTrashEditForm, checkUserEditForm } from "./forms.js";
+import { query } from "./functions.js";
+import { ChooseLocationPage, ListPage, RecentPage, TrashAddPage, TrashEditPage, TrashProfilePage, UserEditPage, UserProfilePage } from "./routes.js";
 import { checkSigninForm, checkUserId } from "./signin.js";
 
 //Document Ready
@@ -20,6 +21,7 @@ $(() => {
             case "user-edit-page": UserEditPage(); break;
 
             case "trash-profile-page": TrashProfilePage(); break;
+            case "trash-add-page": TrashAddPage(); break;
             case "trash-edit-page": TrashEditPage(); break;
 
             case "choose-location-page": ChooseLocationPage(); break;
@@ -32,6 +34,11 @@ $(() => {
     .on("submit", "#signin-form", function(e){
         e.preventDefault();
         checkSigninForm();
+    })
+    .on("submit", "#signup-form", function(e){
+        console.log("singup",e)
+        e.preventDefault();
+        checkSignupForm();
     })
     .on("submit", "#user-edit-form", function(e){
         e.preventDefault();
@@ -63,6 +70,15 @@ $(() => {
         sessionStorage.locationId = id;
     })
 
+    .on("click", ".js-trash-delete", function(e){
+        checkTrashDeleteForm();
+     })
+
+    .on("click", ".js-choose-trash-for-location", function(e){
+        $("#location-trash-id").val(sessionStorage.trashId);
+        $("#location-back").val(-2);
+    })
+
     .on("click", ".js-submit-user-edit-form", function(e) {
         checkUserEditForm();
     })
@@ -77,6 +93,10 @@ $(() => {
 
     .on("click", ".js-submit-trash-edit-form", function(e) {
         checkTrashEditForm();
+    })
+
+    .on("click", ".js-submit-location-add-form", function(e) {
+        checkLocationAddForm();
     })
 
     .on("click", ".nav-link", function(e) {
