@@ -26,3 +26,17 @@ export const checkData = (exterior_check) => new Promise((resolve,reject) => {
     }
     interior_check();
 });
+
+export const checkUpload = (file) => {
+    let fd = new FormData();
+    fd.append("image", file);
+
+    return fetch("data/api.php", {
+        method: "POST",
+        body: fd,
+    }).then((d)=>d.json())
+    .then((d)=>{
+        if (d.error) throw(d.error);
+        else return d;
+    })
+}

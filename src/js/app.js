@@ -1,6 +1,6 @@
-import { checkLocationAddForm, checkPasswordEditForm, checkSignupForm, checkTrashAddForm, checkTrashDeleteForm, checkTrashEditForm, checkUserEditForm } from "./forms.js";
-import { query } from "./functions.js";
-import { ChooseLocationPage, ListPage, RecentPage, TrashAddPage, TrashEditPage, TrashProfilePage, UserEditPage, UserProfilePage } from "./routes.js";
+import { checkListFilter, checkListSearchForm, checkLocationAddForm, checkPasswordEditForm, checkSignupForm, checkTrashAddForm, checkTrashDeleteForm, checkTrashEditForm, checkUserEditForm, checkUserEditPhotoForm } from "./forms.js";
+import { checkUpload, query } from "./functions.js";
+import { ChooseLocationPage, ListPage, RecentPage, TrashAddPage, TrashEditPage, TrashProfilePage, UserEditPage, UserEditPhotoPage, UserProfilePage } from "./routes.js";
 import { checkSigninForm, checkUserId } from "./signin.js";
 
 //Document Ready
@@ -19,6 +19,7 @@ $(() => {
 
             case "user-profile-page": UserProfilePage(); break;
             case "user-edit-page": UserEditPage(); break;
+            case "user-edit-photo-page": UserEditPhotoPage(); break;
 
             case "trash-profile-page": TrashProfilePage(); break;
             case "trash-add-page": TrashAddPage(); break;
@@ -48,9 +49,32 @@ $(() => {
         e.preventDefault();
         checkTrashEditForm();
     })
+    .on("submit", "#list-search-form", function(e){
+        e.preventDefault();
+        let search = $(this).find("input").val();
+        checkListSearchForm(search);
+    })
 
 
 
+    .on("change", ".imagepicker input", function(e) {
+        checkUpload(this.files[0])
+        .then((d) => {
+            console.log(d);
+            let filename = `uploads/${d.result}`;
+            $(this).parent().prev().val(filename);
+            $(this).parent().css({
+                "background-image": `url('${filename}')`
+            })
+        })
+    })
+
+
+    .on("click", "[data-filter]", function(e){
+        let {filter,value} = $(this).data();
+        if(value!=="") checkListFilter(filter,value);
+        else ListPage();
+    })
 
 
     .on("click", ".js-logout", function(e){
@@ -81,6 +105,10 @@ $(() => {
 
     .on("click", ".js-submit-user-edit-form", function(e) {
         checkUserEditForm();
+    })
+
+    .on("click", ".js-submit-user-edit-photo-form", function(e) {
+        checkUserEditPhotoForm();
     })
 
     .on("click", ".js-submit-password-edit-form", function(e) {

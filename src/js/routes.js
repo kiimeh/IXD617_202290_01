@@ -1,6 +1,6 @@
 import { query } from "./functions.js"
 import { makeMap, makeMarkers } from "./maps.js";
-import { makeEditTrashForm, makeEditUserForm, makeTrashList, makeTrashMapDescription, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
+import { makeEditTrashForm, makeEditUserForm, makeFilterList, makeTrashList, makeTrashMapDescription, makeTrashProfileDescription, makeUserProfilePage } from "./parts.js";
 
 
 export const RecentPage = async() => {
@@ -55,6 +55,8 @@ export const ListPage = async() => {
     console.log(trash)
 
     $("#list-page .trashlist-main").html(makeTrashList(trash))
+    $(".filter-bar").html(makeFilterList(trash))
+
 }
 
 export const UserProfilePage = async() => {
@@ -113,6 +115,19 @@ export const UserEditPage = async() => {
     $("#user-edit-page .body").html(makeEditUserForm(user));
 }
 
+
+export const UserEditPhotoPage = async() => {
+    let {result:users} = await query({
+        type:"user_by_id", 
+        params:[sessionStorage.userId]
+    });
+
+    let [user] = users;
+
+    $("#user-edit-photo-page .body").css({
+        "background-image": `url('${user.img}')`
+    });
+}
 
 
 

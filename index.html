@@ -140,7 +140,12 @@
     <!-- Trash LIST PAGE -->
     <section data-role="page" id="list-page">
       <header data-role="header">
-        <h1>Recently Found Trash List</h1>
+        <!-- <h1>Recently Found Trash List</h1> -->
+        <form id="list-search-form" class="hotdog" data-ajax="false">
+          <input id="list-search-input" type="search" data-role="none" placeholder="Search Trash">
+        </form>
+      </header>
+      <header data-role="header" class="filter-bar">
       </header>
       <div data-role="main" class="overscroll">
         <div class="trashlist-main"></div>
@@ -315,6 +320,26 @@
         </div>
       </form>
     </section> 
+
+
+    <!-- USER EDIT PHOTO PAGE -->
+    <section data-role="page" id="user-edit-photo-page">
+      <header data-role="header">
+        <h1>Edit User Photo</h1>
+        <ul>
+          <li><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#" data-rel="back" class="js-submit-user-edit-photo-form">Submit</a></li>
+        </ul>
+      </header>
+      <form data-role="main" data-ajax="false" id="user-edit-photo-form" class="padded display-flex flex-column full overscroll">
+        <input type="hidden" id="user-edit-photo-image">
+        <label class="body imagepicker replace">
+          <input type="file" id="user-edit-photo-input" data-role="none" class="hidden">
+        </label>
+      </form>
+    </section> 
+
 
 
     <!-- TRASH PROFILE PAGE -->

@@ -1,4 +1,5 @@
 import { query } from "./functions.js";
+import { makeTrashList } from "./parts.js";
 
 export const checkSignupForm = () => {
     let username = $("#signup-username").val();
@@ -77,6 +78,26 @@ export const checkPasswordEditForm = () => {
         }
     })
 }
+
+export const checkUserEditPhotoForm = () => {
+    let photo = $("#user-edit-photo-image").val();
+
+    query({
+        type: 'update_user_photo',
+        params:[
+            photo,
+            sessionStorage.userId
+        ]
+    }).then((data) => {
+        if(data.error) {
+            throw(data.error);
+        }else {
+            window.history.go(-1);
+        }
+    })
+}
+
+
 
 
 
@@ -163,4 +184,36 @@ export const checkLocationAddForm = () => {
         }
     })
 
+}
+
+
+export const checkListSearchForm = (search) => {
+    query({
+        type: "search_trash",
+        params: [`%${search}%`,sessionStorage.userId]
+    }).then ((data) => {
+        if(data.error) {
+            throw(data.error);
+        }else {
+            let {result} = data;
+            $("#list-page .trashlist-main").html(makeTrashList(result))
+
+        }
+    })
+}
+
+
+export const checkListFilter = (filter,value) => {
+    query({
+        type: "filter_trash",
+        params: [filter,value,sessionStorage.userId]
+    }).then ((data) => {
+        if(data.error) {
+            throw(data.error);
+        }else {
+            let {result} = data;
+            $("#list-page .trashlist-main").html(makeTrashList(result));
+
+        }
+    })
 }

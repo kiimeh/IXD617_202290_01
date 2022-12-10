@@ -12,9 +12,10 @@ export const makeTrashList = templater(({id,type,weight,date_create,img})=>`
 </a>
 `)
 
+
 export const makeUserProfilePage = ({name,email,username,img})=>`
 <div>
-    <div class="user-profile-image"><img src="${img}"></div>
+    <div class="user-profile-image"><a href="#user-edit-photo-page"><img src="${img}"></a></div>
     <div class= "user-profile-body">
         <div class= "user-profile-name">${name}</div>
         <div class= "user-profile-weight">@${username}</div>
@@ -22,6 +23,7 @@ export const makeUserProfilePage = ({name,email,username,img})=>`
     </div>
 </div>
 `
+
 
 export const makeTrashProfileDescription = ({type,date_create,weight,description})=>`
 <h2>${type}</h2>
@@ -118,4 +120,20 @@ export const makeEditTrashForm = ({trash,namespace}) => {
             value: trash.description
         })}
     `;
+}
+
+
+const filterList = (trash, type) => {
+    let arr = [...(new Set(trash.map(o=>o[type])))];
+    return templater(o=>o?`<span data-filter="${type}" data-value="${o}">${o}</span>`:'')(arr);
+}
+
+
+export const makeFilterList = (trash) => {
+    return `
+        <span data-filter="type" data-value="">All</span>
+        |
+        ${filterList(trash, 'type')}
+        
+    `
 }
