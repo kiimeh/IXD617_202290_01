@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 09, 2022 at 06:03 AM
+-- Generation Time: Dec 12, 2022 at 01:50 AM
 -- Server version: 5.6.51-cll-lve
 -- PHP Version: 7.4.30
 
@@ -44,7 +44,7 @@ CREATE TABLE `track_locations` (
 --
 
 INSERT INTO `track_locations` (`id`, `trash_id`, `lat`, `lng`, `description`, `photo`, `icon`, `date_create`) VALUES
-(1, 14, '34.075420', '-118.310380', 'Nukurib neteb zutommi hu jefriwo navdetjoz be oleve vebewilo sil dote to zuate il lebuv dedi fijo lovven.', 'https://via.placeholder.com/512x400/535/fff/?text=PHOTO', 'https://via.placeholder.com/566x510/569/fff/?text=ICON', '2021-10-28 17:45:43'),
+(1, 0, '34.075420', '-118.310380', 'Nukurib neteb zutommi hu jefriwo navdetjoz be oleve vebewilo sil dote to zuate il lebuv dedi fijo lovven.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/plastic3.jpg', 'https://ekimdesigns.com/ekim/aau/IXD617/images/plastic3.jpg', '2021-10-28 17:45:43'),
 (2, 19, '34.028360', '-118.225130', 'Lec odu eb matfi ka vuop cu wi ga zuava motibrik roijami veowgu so hesohzup.', 'https://via.placeholder.com/503x353/B3A/fff/?text=PHOTO', 'https://via.placeholder.com/427x360/679/fff/?text=ICON', '2021-11-06 11:59:18'),
 (3, 40, '33.799870', '-117.878450', 'Fitfof ke pa ba anvotako godoruv lebudme alabosa cil cih wa calascu du dide av.', 'https://via.placeholder.com/456x390/A6B/fff/?text=PHOTO', 'https://via.placeholder.com/557x519/B77/fff/?text=ICON', '2020-06-22 13:34:45'),
 (4, 27, '34.057820', '-118.229240', 'Roh goazo bam barhur ka puscu wiita je fura jubjev hu zimdiw ikpubo ahiug.', 'https://via.placeholder.com/429x566/B34/fff/?text=PHOTO', 'https://via.placeholder.com/386x549/648/fff/?text=ICON', '2021-10-26 00:44:54'),
@@ -296,7 +296,16 @@ INSERT INTO `track_locations` (`id`, `trash_id`, `lat`, `lng`, `description`, `p
 (249, 45, '33.982650', '-118.251360', 'Lip rupavug ka fami zucezhaf husihizo isvewon danpuze ducdeat lovlusu rimzuweg zu.', 'https://via.placeholder.com/596x432/37A/fff/?text=PHOTO', 'https://via.placeholder.com/505x564/556/fff/?text=ICON', '2021-12-24 06:07:56'),
 (250, 29, '33.827220', '-118.373880', 'Tola zavedop de kufava cibjazu otaw sarkaf neisa wavop ucwufwu su gik nesufkok wahpuj fevbozuj viknaihi.', 'https://via.placeholder.com/398x490/74B/fff/?text=PHOTO', 'https://via.placeholder.com/433x556/B9A/fff/?text=ICON', '2021-03-02 11:10:39'),
 (251, 53, '34.073442', '-118.390557', 'example~~~', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-11-26 20:44:07'),
-(252, 0, '34.110985', '-118.380097', '', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-09 05:59:26');
+(252, 0, '34.110985', '-118.380097', '', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-09 05:59:26'),
+(253, 57, '34.047794', '-118.367694', '', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-09 06:48:18'),
+(254, 59, '34.047278', '-118.365033', '', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-09 06:55:09'),
+(255, 0, '34.101814', '-118.370952', 'test', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:15:24'),
+(256, 0, '34.103173', '-118.370500', 'test', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:15:34'),
+(257, 0, '34.180806', '-118.334608', 'test', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:16:08'),
+(258, 0, '34.202787', '-118.327256', 'test', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:16:16'),
+(259, 62, '34.072101', '-118.381956', 'test', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:16:55'),
+(260, 63, '34.100447', '-118.379000', '', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:19:10'),
+(261, 64, '34.054003', '-118.370027', 'test-3', 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', '2022-12-11 02:24:33');
 
 -- --------------------------------------------------------
 
@@ -320,16 +329,16 @@ CREATE TABLE `track_trash` (
 
 INSERT INTO `track_trash` (`id`, `user_id`, `type`, `description`, `img`, `weight`, `date_create`) VALUES
 (1, 6, 'foodwaste', 'Naufpet musubo leve zobus udonicu rihfohnul ovo luwvaj fofwidhez arjegzu ofoso vakuduma.', 'https://via.placeholder.com/424x373/A89/fff/?text=foodwaste', '2', '2020-10-26 11:27:06'),
-(2, 7, 'paper', 'Vo di hoj vefca ajupiwu rac giune munbaw nizirak sebgiz gaaz uguru fev.', 'https://via.placeholder.com/537x588/77A/fff/?text=paper', '-4', '2021-02-03 23:29:55'),
+(2, 0, 'paper', 'Vo di hoj vefca ajupiwu rac giune munbaw nizirak sebgiz gaaz uguru fev.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/paper2.jpeg', '1.2kg', '2021-02-03 23:29:55'),
 (3, 1, 'glass', 'Ve ru nazafla ermizuk gabda vepoipi topibe vos na jokopzog ocej noodaji tog vihup.', 'https://via.placeholder.com/528x521/5BA/fff/?text=glass', '6', '2020-05-26 15:57:36'),
-(4, 0, 'glass', 'Uzi obuwe zeh benemof mafbacho nabci aj orgijih eci odduju penhe oguju bijloh boero ovnu cizhizo efonez gujbola.', 'https://via.placeholder.com/518x384/BA9/fff/?text=glass', '-9', '2022-01-29 12:48:38'),
+(4, 0, 'glass', 'Uzi obuwe zeh benemof mafbacho nabci aj orgijih eci odduju penhe oguju bijloh boero ovnu cizhizo efonez gujbola.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/glass1.jpg', '9kg', '2022-01-29 12:48:38'),
 (5, 9, 'paper', 'Seba tuomu apfok foak foiza defak fanih da di piheg ru fa fowcip udago tape cetpohosi pa rahjifniw.', 'https://via.placeholder.com/504x598/348/fff/?text=paper', '0', '2020-12-20 05:54:10'),
 (6, 4, 'paper', 'Lategdon nabta gekon ki fid gewenva zajpahene susuhu jarhikgi sasfis ziepcaw visigda.', 'https://via.placeholder.com/455x491/393/fff/?text=paper', '3', '2022-03-15 08:12:42'),
-(7, 0, 'glass', 'Boseefo cut sade ciczaj wu muf obe ju ajhusak zajehlaj gehpozoj duap ug.', 'https://via.placeholder.com/445x502/856/fff/?text=glass', '2', '2022-02-24 16:13:12'),
+(7, 2, 'glass', 'Boseefo cut sade ciczaj wu muf obe ju ajhusak zajehlaj gehpozoj duap ug.', 'https://via.placeholder.com/445x502/856/fff/?text=glass', '2', '2022-02-24 16:13:12'),
 (8, 6, 'glass', 'Becunu dibu ihtun renseba su zad puc zoblarif asa tilfid eb pivedoc rini oknos hi ma so.', 'https://via.placeholder.com/407x397/75A/fff/?text=glass', '-5', '2022-02-04 23:51:12'),
 (9, 3, 'foodwaste', 'Bavkow mihe vareek epabid uhe darwed fuagi ud netilhek jinerik unamobvoc juwuba apopo lapafu.', 'https://via.placeholder.com/495x454/835/fff/?text=foodwaste', '0', '2022-02-07 10:00:04'),
 (10, 6, 'glass', 'Rudoroc okavop dir gigoc tuhdonzob ta ratriveb guhrohi it kuvegu lastopud elupafap piezdu ru sap somudbe.', 'https://via.placeholder.com/358x426/36B/fff/?text=glass', '8', '2022-08-08 15:02:52'),
-(11, 7, 'plastic', 'Gunsu mu ahosirja fimacu iwa pocezu kumi igupam ihu jag werlore nu ozpa nulifuj kiza gehu rikij mackazak.', 'https://via.placeholder.com/552x436/4B7/fff/?text=plastic', '8', '2021-01-18 20:47:18'),
+(11, 0, 'plastic', 'Gunsu mu ahosirja fimacu iwa pocezu kumi igupam ihu jag werlore nu ozpa nulifuj kiza gehu rikij mackazak.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/plastic3.jpg', '0.6kg', '2021-01-18 20:47:18'),
 (12, 9, 'paper', 'Ihsoewe ukdanu ok jivifop muruwut hebsuv go pa mum vuwbajgic guz po cuj gegnas pacada miljid orhev.', 'https://via.placeholder.com/532x575/963/fff/?text=paper', '-1', '2021-06-20 19:50:37'),
 (13, 5, 'paper', 'Mihnop lipoow dotirame mot pivnebmej lelzipo bimoz ja vupzis degidu izamew kuh fupikto.', 'https://via.placeholder.com/551x503/A9A/fff/?text=paper', '8', '2021-11-19 16:15:48'),
 (14, 10, 'paper', 'Uheni jouc baptef neno pod jobwe anela od nabita beva kolrovi peisuto lu izojajo.', 'https://via.placeholder.com/385x479/8A8/fff/?text=paper', '-4', '2022-07-16 09:23:24'),
@@ -339,10 +348,10 @@ INSERT INTO `track_trash` (`id`, `user_id`, `type`, `description`, `img`, `weigh
 (18, 9, 'plastic', 'Caluve gemrok ridgog zusereco pawhihma bes tojnareh zotib wibado jig cipcohse matmo zup za enzub.', 'https://via.placeholder.com/464x358/9A4/fff/?text=plastic', '7', '2022-01-31 01:40:31'),
 (19, 7, 'plastic', 'Okien uporemef jisij ugpauge ide wiz evesubuc everunusi nu vatoduam fiwti dogzal apook waena lolosol fi wama.', 'https://via.placeholder.com/399x414/596/fff/?text=plastic', '-1', '2022-04-23 08:09:41'),
 (20, 5, 'paper', 'Odjo bim eg ipbo nun ve vitajuj noufouh ozewoloz huvtowveb tih cureplu etmun jen mokfilnu beacfud cozogkel.', 'https://via.placeholder.com/427x508/5B3/fff/?text=paper', '-2', '2022-08-24 16:22:45'),
-(21, 0, 'foodwaste', 'Ampigub ti mejifwig bo ke obsozji henutmom son hev riogra guktom zuktunos.', 'https://via.placeholder.com/465x398/859/fff/?text=foodwaste', '-6', '2020-11-26 09:17:15'),
+(21, 2, 'foodwaste', 'Ampigub ti mejifwig bo ke obsozji henutmom son hev riogra guktom zuktunos.', 'https://via.placeholder.com/465x398/859/fff/?text=foodwaste', '6kg', '2020-11-26 09:17:15'),
 (22, 10, 'paper', 'Su hed uhro gu ifagufcez suel za vulib fuka hibemo ledfi ba.', 'https://via.placeholder.com/383x572/9B9/fff/?text=paper', '-9', '2020-10-29 06:48:58'),
 (23, 4, 'paper', 'Ip fi wad irosibi diojcuw kucuni ohe adla li pegu garpo esanogiv nej ol mic awhijje.', 'https://via.placeholder.com/486x447/3B8/fff/?text=paper', '0', '2020-03-20 03:13:37'),
-(24, 0, 'paper', 'Ite puhji jibut ka apeja buj zoj vuik il cusdufgi hev tien ko wib cuvkut.', 'https://via.placeholder.com/436x528/56B/fff/?text=paper', '-10', '2021-08-08 20:37:21'),
+(24, 0, 'paper', 'Ite puhji jibut ka apeja buj zoj vuik il cusdufgi hev tien ko wib cuvkut.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/paper1.jpeg', '4kg', '2021-08-08 20:37:21'),
 (26, 3, 'glass', 'Hofew pazatul civ kiec uhukuki zucah ivziari kutfuzpiv hudeb fe belve luhtas oj.', 'https://via.placeholder.com/468x452/638/fff/?text=glass', '80', '2021-12-03 19:50:33'),
 (27, 8, 'foodwaste', 'Pufuheof wofhudliv ga rurufimo migovfi nugut umeosi zeerbi siag cuhowcum uvufeb zuomdif fohro juohuve.', 'https://via.placeholder.com/440x425/3A3/fff/?text=foodwaste', '3', '2022-05-19 00:12:38'),
 (28, 10, 'paper', 'Wo kubawud zu efuko ba loctosci uk vooze fe bo mo ico tavkir vaduine.', 'https://via.placeholder.com/448x493/56B/fff/?text=paper', '-3', '2021-10-03 18:11:01'),
@@ -351,10 +360,10 @@ INSERT INTO `track_trash` (`id`, `user_id`, `type`, `description`, `img`, `weigh
 (31, 1, 'glass', 'Neamos tek tedo bica zuman kafo vouzne huntatcij pu bo nusarvu es tanojic dojpi.', 'https://via.placeholder.com/454x406/B9A/fff/?text=glass', '10', '2022-07-21 12:31:09'),
 (32, 7, 'foodwaste', 'Bam ihoce pes af ekicaw savolvud evwuwan rowgibi goprikir ra efawadiz dasa ufeniiga jidpewma omume muthek fuwsokbon adura.', 'https://via.placeholder.com/406x570/838/fff/?text=foodwaste', '-5', '2022-10-20 20:30:45'),
 (33, 10, 'paper', 'Robin ta jibful zogegwet voknoh daholuwuc omga wu lalraru visu pudop bikmi ifoneufu hamupufad josu.', 'https://via.placeholder.com/589x598/898/fff/?text=paper', '-10', '2021-01-11 03:44:42'),
-(34, 10, 'plastic', 'Ocsec inoku pawuju tupte ir tadvun ikonig gu fikfecog bazraj mipi fobomil tito doh vetfoki buw epelgus.', 'https://via.placeholder.com/373x486/369/fff/?text=plastic', '10', '2021-10-30 16:44:44'),
+(34, 0, 'plastic', 'Ocsec inoku pawuju tupte ir tadvun ikonig gu fikfecog bazraj mipi fobomil tito doh vetfoki buw epelgus.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/plastic1.jpeg', '1kg', '2021-10-30 16:44:44'),
 (35, 9, 'plastic', 'Rojogdez gimwoj ujcefoki ehgi torrelas lejre cot edva zok hinpume sabis did wumadger bodok.', 'https://via.placeholder.com/481x507/756/fff/?text=plastic', '-3', '2022-03-06 03:19:48'),
 (36, 5, 'foodwaste', 'Ego pewa sozrubumi buj jajacjoc pewen fozo ol wudi hurvatu kimac egpa jabfehez cudgavdi gon bit anodrop nopiedi.', 'https://via.placeholder.com/599x497/499/fff/?text=foodwaste', '8', '2022-10-26 06:07:23'),
-(37, 8, 'plastic', 'Puluaj vo iwitane ci vob ufzezred duw wi wemomsor vaarvuw didiado han desak.', 'https://via.placeholder.com/572x425/857/fff/?text=plastic', '0', '2020-08-19 15:34:38'),
+(37, 0, 'plastic', 'Puluaj vo iwitane ci vob ufzezred duw wi wemomsor vaarvuw didiado han desak.', 'https://ekimdesigns.com/ekim/aau/IXD617/images/plastic2.jpeg', '1.2kg', '2020-08-19 15:34:38'),
 (38, 7, 'plastic', 'Pid emho lavjacel leozizil jamwawoci pajo utodoraj fas rirnine itahzu fa tehmu boc beawowo ade fepownav zacupa perso.', 'https://via.placeholder.com/374x491/7B7/fff/?text=plastic', '9', '2020-08-28 09:12:03'),
 (39, 8, 'paper', 'Afuj fo rul ra rebkus zez budan ezzukne co zeja rilo jebi fizogre.', 'https://via.placeholder.com/561x599/993/fff/?text=paper', '4', '2021-03-15 06:55:02'),
 (40, 5, 'glass', 'Vederpib asbaos cumzozku rubemuta amsefhic fefuh nari ab ev udlu dosefuc pe me nabofi fuinowoc no.', 'https://via.placeholder.com/442x413/4A3/fff/?text=glass', '-2', '2021-05-20 19:34:40'),
@@ -371,7 +380,14 @@ INSERT INTO `track_trash` (`id`, `user_id`, `type`, `description`, `img`, `weigh
 (53, 11, 'plastic3', 'Example Trash list item', 'https://via.placeholder.com/400/?text=TRASH', '1kg', '2022-11-26 19:36:32'),
 (54, 12, 'paper', 'Paper Thrown at the city', 'https://via.placeholder.com/400/?text=TRASH', '1kg', '2022-12-09 05:16:48'),
 (55, 12, 'foodwaste', 'Food waste', 'https://via.placeholder.com/400/?text=TRASH', '4kg', '2022-12-09 05:29:51'),
-(57, 0, 'foodwaste', 'Foodwaste', 'https://via.placeholder.com/400/?text=TRASH', '1kg', '2022-12-09 06:00:38');
+(57, 0, 'foodwaste', 'Foodwaste', 'https://ekimdesigns.com/ekim/aau/IXD617/images/foodwaste2.jpg', '0.5kg', '2022-12-09 06:00:38'),
+(58, 3, 'plastic', 'plastic trash', 'https://via.placeholder.com/400/?text=TRASH', '1kg', '2022-12-09 06:49:11'),
+(59, 13, 'foodwaste', 'Foodwaste', 'https://via.placeholder.com/400/?text=TRASH', '1kg', '2022-12-09 06:54:53'),
+(60, 1, '', '', 'https://via.placeholder.com/400/?text=TRASH', '', '2022-12-11 00:04:41'),
+(61, 1, '', '', 'https://via.placeholder.com/400/?text=TRASH', '', '2022-12-11 00:18:59'),
+(62, 4, 'foodwaste', 'Heavy food waste ', 'https://via.placeholder.com/400/?text=TRASH', '3kg', '2022-12-11 02:01:06'),
+(63, 4, 'paper', 'test1', 'https://via.placeholder.com/400/?text=TRASH', '8kg', '2022-12-11 02:18:39'),
+(64, 4, 'test', 'test-3', 'https://via.placeholder.com/400/?text=TRASH', '3', '2022-12-11 02:23:34');
 
 -- --------------------------------------------------------
 
@@ -394,18 +410,19 @@ CREATE TABLE `track_users` (
 --
 
 INSERT INTO `track_users` (`id`, `name`, `username`, `email`, `password`, `img`, `date_create`) VALUES
-(0, 'Eva Washington', 'user0', 'user0@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/519x439/793/fff/?text=Eva Washington', '2022-09-21 21:09:52'),
+(0, 'Eva Washington', 'user0', 'user0@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'uploads/1670600639.5799_portrait.jpg', '2022-09-21 21:09:52'),
 (1, 'Elizabeth Grant', 'user1', 'user1@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/519x439/793/fff/?text=Elizabeth Grant', '2022-04-27 11:58:45'),
 (2, 'Cole Warner', 'user2', 'user2@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/404x577/963/fff/?text=Cole Warner', '2021-12-24 21:26:56'),
 (3, 'Randall Wells', 'user3', 'user3@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/525x501/3A9/fff/?text=Randall Wells', '2020-04-16 16:31:20'),
-(4, 'Estelle Ellis', 'user4', 'user4@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/568x481/749/fff/?text=Estelle Ellis', '2021-10-19 02:02:56'),
+(4, 'Estelle Ellis', 'user4', 'user4@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'uploads/1670748699.6379_portrait2.jpg', '2021-10-19 02:02:56'),
 (5, 'Luke Boyd', 'user5', 'user5@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/377x369/886/fff/?text=Luke Boyd', '2020-10-10 09:01:34'),
 (6, 'John Dennis', 'user6', 'user6@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/449x491/789/fff/?text=John Dennis', '2020-12-15 11:05:46'),
 (7, 'Isabella Hunter', 'user7', 'user7@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/465x469/3B5/fff/?text=Isabella Hunter', '2021-09-18 07:03:10'),
 (8, 'Jack Harmon', 'user8', 'user8@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/540x503/A45/fff/?text=Jack Harmon', '2021-07-11 03:23:07'),
 (9, 'Todd Hunt', 'user9', 'user9@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/530x518/A75/fff/?text=Todd Hunt', '2020-12-02 14:46:59'),
 (10, 'Rose Norman', 'user10', 'user10@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/524x588/87A/fff/?text=Rose Norman', '2020-01-17 19:39:53'),
-(11, 'Example Name', 'user11', 'user11@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/?text=USER', '2022-11-26 19:33:23');
+(11, 'Example Name', 'user11', 'user11@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/?text=USER', '2022-11-26 19:33:23'),
+(13, '', 'user12', 'user12@gmail.com', '1a1dc91c907325c69271ddf0c944bc72', 'https://via.placeholder.com/400/?text=USER', '2022-12-09 06:54:31');
 
 --
 -- Indexes for dumped tables
@@ -437,19 +454,19 @@ ALTER TABLE `track_users`
 -- AUTO_INCREMENT for table `track_locations`
 --
 ALTER TABLE `track_locations`
-  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=262;
 
 --
 -- AUTO_INCREMENT for table `track_trash`
 --
 ALTER TABLE `track_trash`
-  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `track_users`
 --
 ALTER TABLE `track_users`
-  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

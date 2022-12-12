@@ -98,6 +98,24 @@ export const checkUserEditPhotoForm = () => {
 }
 
 
+export const checkTrashAddPhotoForm = () => {
+    let photo = $("#trash-add-photo-image").val();
+
+    query({
+        type: 'update_trash_photo',
+        params:[
+            photo,
+            sessionStorage.userId
+        ]
+    }).then((data) => {
+        if(data.error) {
+            throw(data.error);
+        }else {
+            window.history.go(-1);
+        }
+    })
+}
+
 
 
 

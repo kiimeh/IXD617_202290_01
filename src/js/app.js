@@ -1,6 +1,6 @@
-import { checkListFilter, checkListSearchForm, checkLocationAddForm, checkPasswordEditForm, checkSignupForm, checkTrashAddForm, checkTrashDeleteForm, checkTrashEditForm, checkUserEditForm, checkUserEditPhotoForm } from "./forms.js";
+import { checkListFilter, checkListSearchForm, checkLocationAddForm, checkPasswordEditForm, checkSignupForm, checkTrashAddForm, checkTrashAddPhotoForm, checkTrashDeleteForm, checkTrashEditForm, checkUserEditForm, checkUserEditPhotoForm } from "./forms.js";
 import { checkUpload, query } from "./functions.js";
-import { ChooseLocationPage, ListPage, RecentPage, TrashAddPage, TrashEditPage, TrashProfilePage, UserEditPage, UserEditPhotoPage, UserProfilePage } from "./routes.js";
+import { ChooseLocationPage, ListPage, RecentPage, TrashAddPage, TrashAddPhotoPage, TrashEditPage, TrashProfilePage, UserEditPage, UserEditPhotoPage, UserProfilePage } from "./routes.js";
 import { checkSigninForm, checkUserId } from "./signin.js";
 
 //Document Ready
@@ -24,6 +24,8 @@ $(() => {
             case "trash-profile-page": TrashProfilePage(); break;
             case "trash-add-page": TrashAddPage(); break;
             case "trash-edit-page": TrashEditPage(); break;
+            case "trash-add-page": TrashAddPhotoPage(); break;
+            
 
             case "choose-location-page": ChooseLocationPage(); break;
             case "location-edit-page": break;
@@ -109,6 +111,10 @@ $(() => {
 
     .on("click", ".js-submit-user-edit-photo-form", function(e) {
         checkUserEditPhotoForm();
+    })
+
+    .on("click", ".js-submit-trash-add-photo-form", function(e) {
+        checkTrashAddPhotoForm();
     })
 
     .on("click", ".js-submit-password-edit-form", function(e) {

@@ -130,6 +130,20 @@ export const UserEditPhotoPage = async() => {
 }
 
 
+export const TrashAddPhotoPage = async() => {
+    let {result:users} = await query({
+        type:"user_by_id", 
+        params:[sessionStorage.userId]
+    });
+
+    let [user] = users;
+
+    $("#trash-add-page .body").css({
+        "background-image": `url('${user.img}')`
+    });
+}
+
+
 
 export const TrashAddPage = async() => {
     $("#trash-add-page .body").html(makeEditTrashForm({

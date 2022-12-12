@@ -26,13 +26,15 @@
       <div data-role="main" class="display-flex flex-column">
         <div class="flex-stretch">
           <div class="background-onboarding">
-            <h2 class="onboarding-text">Hello,</h2>
-            <p class="onboarding-text-para">Let's track trash to make our earth clean and healthy.</p>
+            <h2 class="onboarding-text">INTRODUCING</h2>
+            <h2 class="onboarding-header">CLEAN IT</h2>
+            <p class="onboarding-text-para">A TOOL TO HELP YOU TRACK TRASH TO MAKE A BETTER WORLD.</p>
           </div>
 
           <div class="form-control form-control-history onboarding-button">
             <a href="#signin-page"><input type="submit" class="form-button form-button2" value="Next" data-role="none"></a>
           </div>
+          <p class="button-text-para">( CLICK TO BEGIN )</p>
         </div>
       </div>
     </section>
@@ -40,7 +42,8 @@
     <!-- LOGIN Page -->
     <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
-        <div class="flex-stretch signin-hero">
+        <div class="signin-main-text">CLEAN IT</div>
+        <div class="signin-hero">
           <div class="login-text">
             <h1 class="loging-heading">Welcome back 👋</h1>
             <p class="login-para">We are happy to see you again. To use your account, please log in first.</p>
@@ -52,16 +55,16 @@
           <div class="warning"></div>
           <div class="form-control">
             <label class="form-label" for="signin-username">Username</label>
-            <input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Type your Username">
+            <input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Enter your Username">
           </div>
           <div class="form-control">
             <label class="form-label" for="signin-password">Password</label>
-            <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Type your Password">
+            <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Enter your Password">
           </div>
           <div class="form-control">
             <input type="submit" class="form-button" value="Sign In" data-role="none" style="color: white">
           </div>
-          <div class="form-control" style="text-align: center; font-size:0.7em">Don't have an account? <a href="#signup-page">Sign Up!</a>
+          <div class="form-control" style="text-align: center; font-size:0.7em">Don't have an account? <a href="#signup-page" class="signup-text">Sign Up!</a>
           </div>
         </form>
       </div>
@@ -70,31 +73,36 @@
 
     <!-- Signup Page -->
     <section data-role="page" id="signup-page">
-      <div data-role="main" class="display-flex flex-column flex-justify-center">
-        <form class="form" id="signup-form" data-ajax="false">
-          <div class="form-control">
-            <label class="form-label" for="signup-username">Username</label>
-            <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Type your Username" required>
-          </div>
-          <div class="form-control">
-            <label class="form-label" for="signup-email">Email</label>
-            <input class="form-input" type="email" id="signup-email" data-role="none" placeholder="Type your Email" required>
-          </div>
-          <div class="form-control">
-            <label class="form-label" for="signup-password">Type a Password</label>
-            <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Type your Password" required>
-          </div>
-          <div class="form-control">
-            <label class="form-label" for="signup-confirm">Confirm Password</label>
-            <input class="form-input" type="password" id="signup-confirm" data-role="none" placeholder="Type your Password" required>
-          </div>
-          <div class="form-control">
-            <input type="submit" class="form-button" value="Complete Sign Up" data-role="none">
-          </div>
-          <div class="form-control" style="text-align: center; font-size:0.7em">
-            Already have an account? <a href="#signin-page">Sign In!</a>
-          </div>
-        </form>
+      <header data-role="header">
+        <h1>Sign Up</h1>
+      </header>
+      <div class="background-onboarding sign-up-onboarding">
+        <div data-role="main" class="display-flex flex-column flex-justify-center">
+          <form class="form" id="signup-form" data-ajax="false">
+            <div class="form-control">
+              <label class="form-label" for="signup-username">Username</label>
+              <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Enter your Username" required>
+            </div>
+            <div class="form-control">
+              <label class="form-label" for="signup-email">Email</label>
+              <input class="form-input" type="email" id="signup-email" data-role="none" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-control">
+              <label class="form-label" for="signup-password">Type a Password</label>
+              <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Enter your Password" required>
+            </div>
+            <div class="form-control">
+              <label class="form-label" for="signup-confirm">Confirm Password</label>
+              <input class="form-input" type="password" id="signup-confirm" data-role="none" placeholder="Confirm your Password" required>
+            </div>
+            <div class="form-control">
+              <input type="submit" class="form-button" value="Complete Sign Up" data-role="none">
+            </div>
+            <div class="form-control" style="color:#000; text-align: center; font-size:0.7em">
+              Already have an account? <a href="#signin-page">Sign In!</a>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -105,7 +113,7 @@
         <div class="map"></div>
 
         <div class="floater bottom right">
-          <a href="#choose-trash-page" class="btn-circle">&plus;</a>
+          <a href="#trash-add-page" class="btn-circle">&plus;</a>
         </div>
 
         <div id="map-recent-modal" class="modal">
@@ -118,18 +126,16 @@
       <footer data-role="footer">
         <ul>
           <li><a href="#recent-page">
-            <span class="footer-icon"><img src="images/icons/map-location-dot-solid.svg"class="icon" alt="map-icon"></span>
-            <span class="footer-label">Recent</span>
+            <span class="footer-icon"><img src="images/icons/map.png" class="icon" alt="map-icon"></span>
           </a></li>
 
           <li><a href="#list-page">
-            <span class="footer-icon"><img src="images/icons/trash-arrow-up-solid.svg" class="icon" alt="trash-icon"></span>
-            <span class="footer-label">List</span>
+            <span class="footer-icon"><img src="images/icons/trash.png" class="icon" alt="trash-icon"></span>
             </a></li>
 
           <li><a href="#user-profile-page">
-            <span class="footer-icon"><img src="images/icons/user-solid.svg" class="icon" alt="user-icon"></span>
-            <span class="footer-label">Profile</span>
+            <span class="footer-icon"><img src="images/icons/user.png" class="icon" alt="user-icon"></span>
+
             </a></li>
         </ul>
       </footer>
@@ -156,30 +162,20 @@
       <footer data-role="footer">
         <ul>
           <li><a href="#recent-page">
-            <span class="footer-icon"><img src="images/icons/map-location-dot-solid.svg"class="icon" alt="map-icon"></span>
-            <span class="footer-label">Recent</span>
+            <span class="footer-icon-page"><img src="images/icons/map.png" class="icon" alt="map-icon"></span>
           </a></li>
 
           <li><a href="#list-page">
-            <span class="footer-icon"><img src="images/icons/trash-arrow-up-solid.svg" class="icon" alt="trash-icon"></span>
-            <span class="footer-label">List</span>
+            <span class="footer-icon-page"><img src="images/icons/trash.png" class="icon" alt="trash-icon"></span>
             </a></li>
 
           <li><a href="#user-profile-page">
-            <span class="footer-icon"><img src="images/icons/user-solid.svg" class="icon" alt="user-icon"></span>
-            <span class="footer-label">Profile</span>
+            <span class="footer-icon-page"><img src="images/icons/user.png" class="icon" alt="user-icon"></span>
+
             </a></li>
         </ul>
       </footer>
 
-      <div id="list-add-modal" class="modal">
-        <div class="modal-back" data-deactivate="#list-add-modal"></div>
-        <div class="modal-popup">
-            <div class="modal-head">Head</div>
-            <div class="modal-body">Body</div>
-            <div class="modal-body">Foot</div>
-        </div>
-      </div>
     </section>
 
     <!-- Choose Trash Page -->
@@ -244,21 +240,56 @@
     <!-- USER PROFILE PAGE -->
     <section data-role="page" id="user-profile-page">
       <div data-role="main" class="overscroll">
-        <div class="body"></div>
+        <header data-role="header">
+          <h1>Profile</h1>
+          <ul>
+            <li><a href="#user-settings-page" data-rel="back"><span><img src="images/icons/chevron.png" class="back-icon" alt="back-icon"></span></a></li>
+            <li class="flex-stretch"></li>
+            <div><a href="#" data-activate="#user-profile-modal" class="ui-link">Edit</a></div>
+          </ul>
+        </header>
 
-        <div class="floater top right">
-          <a href="#user-settings-page">
-            <img class="icon" src="images/icons/bars-solid.svg" alt="menu-icon">
-          </a>
+        <div class="body user-profile-height">
+          
         </div>
       </div>
+
+
+
       <footer data-role="footer">
         <ul>
-          <li><a href="#recent-page">Recent</a></li>
-          <li><a href="#list-page">List</a></li>
-          <li><a href="#user-profile-page">Profile</a></li>
+          <li><a href="#recent-page">
+            <span class="footer-icon-page"><img src="images/icons/map.png" class="icon" alt="map-icon"></span>
+          </a></li>
+
+          <li><a href="#list-page">
+            <span class="footer-icon-page"><img src="images/icons/trash.png" class="icon" alt="trash-icon"></span>
+            </a></li>
+
+          <li><a href="#user-profile-page">
+            <span class="footer-icon-page"><img src="images/icons/user.png" class="icon" alt="user-icon"></span>
+
+            </a></li>
         </ul>
       </footer>
+
+      
+      <div id="user-profile-modal" class="modal">
+        <div class="modal-back" data-deactivate="#user-profile-modal"></div>
+        <div class="modal-drawer bottom">
+           
+            <div class="modal-body">
+                <div class="user-progile-more">
+                    <h2>CLEAN IT</h2>
+                    <h3>User Profile</h3>
+                    <p class="line" style="margin-bottom: 1.5em;"></p>
+                    <div><a href="#user-edit-page" class="modal-edit"> Edit Profile</a></div>
+                    <div><a href="#password-edit-page" class="modal-edit"> Edit Password</a></div>
+                    <div><a href="#" class="js-logout" class="modal-edit"> Log out</a></div>   
+                </div>                  
+            </div>
+        </div>
+    </div>
     </section>
 
 
@@ -286,9 +317,10 @@
         <ul>
           <li><a href="#" data-rel="back">Back</a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#" data-rel="back" class="js-submit-user-edit-form">Submit</a></li>
+          <li><a href="#" data-rel="back" class="js-submit-user-edit-form submit-button">Submit</a></li>
         </ul>
       </header>
+      
       <form data-role="main" data-ajax="false" id="user-edit-form" class="padded overscroll">
         <div class="body"></div>
         <div class="flex-stretch"></div>
@@ -340,6 +372,52 @@
       </form>
     </section> 
 
+    <!-- Trash ADD Page -->
+    <section data-role="page" id="trash-add-page">
+      <header data-role="header">
+        <h1>Add Trash</h1>
+        <ul>
+          <li><a href="#" data-rel="back"><span><img src="images/icons/chevron.png" class="back-icon" alt="back-icon"></span></a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#" class="js-submit-trash-add-form submit-button">Submit</a></li>
+        </ul>
+      </header>
+
+      <form data-ajax="false" id="trash-add-photo-form" class="padded display-flex flex-column full overscroll">
+        <input type="hidden" id="trash-add-photo-image">
+        <label class="addimage imagepicker replace">
+          <div class="label-photo">Click to add image</div>
+          <input type="file" id="trash-add-photo-input" data-role="none" class="hidden">
+        </label>
+      </form>
+
+      
+
+      <form data-role="main" data-ajax="false" id="trash-add-form" class="padded display-flex flex-column full overscroll" style="padding-top: 5px;">
+        <div class="body"> 
+        </div>
+      </form>
+
+
+      <footer data-role="footer">
+        <ul>
+          <li><a href="#recent-page">
+            <span class="footer-icon"><img src="images/icons/map.png" class="icon" alt="map-icon"></span>
+          </a></li>
+
+          <li><a href="#list-page">
+            <span class="footer-icon"><img src="images/icons/trash.png" class="icon" alt="trash-icon"></span>
+            </a></li>
+
+          <li><a href="#user-profile-page">
+            <span class="footer-icon"><img src="images/icons/user.png" class="icon" alt="user-icon"></span>
+
+            </a></li>
+        </ul>
+      </footer>
+
+    </section> 
+
 
 
     <!-- TRASH PROFILE PAGE -->
@@ -347,11 +425,12 @@
       <header data-role="header">
         <h1></h1>
         <ul>
-          <li><a href="#" data-rel="back">Back</a></li>
+          <li><a href="#" data-rel="back"><span><img src="images/icons/chevron.png" class="back-icon" alt="back-icon"></span></a></li>
           <li class="flex-stretch"></li>
           <li><a href="#trash-edit-page">Edit</a></li>
         </ul>
       </header>
+
       <div data-role="main">
         <div class="trash-profile-top">
           <div class="floater bottom right">
@@ -366,6 +445,8 @@
           <div class="trash-profile-section section-map active">
             <div class="map"></div>
 
+
+
             <div class="floater bottom right">
               <a href="#choose-location-page" class="btn-circle js-choose-trash-for-location">&plus;</a>
             </div>
@@ -377,9 +458,18 @@
 
       <footer data-role="footer">
         <ul>
-          <li><a href="#recent-page">Recent</a></li>
-          <li><a href="#list-page">List</a></li>
-          <li><a href="#user-profile-page">Profile</a></li>
+          <li><a href="#recent-page">
+            <span class="footer-icon"><img src="images/icons/map.png" class="icon" alt="map-icon"></span>
+          </a></li>
+
+          <li><a href="#list-page">
+            <span class="footer-icon"><img src="images/icons/trash.png" class="icon" alt="trash-icon"></span>
+            </a></li>
+
+          <li><a href="#user-profile-page">
+            <span class="footer-icon"><img src="images/icons/user.png" class="icon" alt="user-icon"></span>
+
+            </a></li>
         </ul>
       </footer>
     </section>
@@ -392,35 +482,38 @@
     <header data-role="header">
       <h1>Edit Trash</h1>
       <ul>
-        <li><a href="#" data-rel="back">Back</a></li>
+        <li><a href="#" data-rel="back"><span><img src="images/icons/chevron.png" class="back-icon" alt="back-icon"></span></a></li>
         <li class="flex-stretch"></li>
         <li><a href="#" class="js-submit-trash-edit-form">Submit</a></li>
       </ul>
     </header>
+
     <form data-role="main" data-ajax="false" id="trash-edit-form" class="padded display-flex flex-column full overscroll">
       <div class="body"></div>
       <div class="flex-stretch"></div>
 
     </form>
-  </section> 
 
-
-
-   <!-- Trash ADD Page -->
-  <section data-role="page" id="trash-add-page">
-    <header data-role="header">
-      <h1>Add Trash</h1>
+    <footer data-role="footer">
       <ul>
-        <li><a href="#" data-rel="back">Back</a></li>
-        <li class="flex-stretch"></li>
-        <li><a href="#" class="js-submit-trash-add-form">Submit</a></li>
-      </ul>
-    </header>
-    <form data-role="main" data-ajax="false" id="trash-add-form" class="padded display-flex flex-column full overscroll">
+        <li><a href="#recent-page">
+          <span class="footer-icon"><img src="images/icons/map.png" class="icon" alt="map-icon"></span>
+        </a></li>
 
-      <div class="body"></div>
-    </form>
+        <li><a href="#list-page">
+          <span class="footer-icon"><img src="images/icons/trash.png" class="icon" alt="trash-icon"></span>
+          </a></li>
+
+        <li><a href="#user-profile-page">
+          <span class="footer-icon"><img src="images/icons/user.png" class="icon" alt="user-icon"></span>
+
+          </a></li>
+      </ul>
+    </footer>
   </section> 
+
+  
+
 
 
   </body>
