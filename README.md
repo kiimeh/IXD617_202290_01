@@ -17,3 +17,4 @@ IXD 617 Advanced Tech: Mobile Web
 
 ### Screenshots
 - https://ekimdesigns.com/ekim/aau/IXD617/screenshots/midterm/
+- https://ekimdesigns.com/ekim/aau/IXD617/screenshots/final/
